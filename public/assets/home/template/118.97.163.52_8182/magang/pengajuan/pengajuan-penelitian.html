@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="id">
+    
+<!-- Mirrored from 118.97.163.52:8182/magang/pengajuan/pengajuan-penelitian by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Nov 2024 17:27:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="all"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>INTERNSHIP PALMCO REGIONAL III</title>
+        <meta name="description" content="INTERNSHIP PALMCO REGIONAL III" />
+        <meta name="author" content="Fairuz Irgawan Sinaga & Gusrifaris Yuda Alhafis" />
+        <link rel="canonical" href="http://ptpn5.co.id/magang"/>
+        <meta property="og:url" content="http://ptpn5.co.id/magang">
+        <meta property="og:title" content="INTERNSHIP PALMCO REGIONAL III"/>
+        <meta property="og:description" content="INTERNSHIP PALMCO REGIONAL III"/>
+        <meta property="og:site_name" content="INTERNSHIP PALMCO REGIONAL III">
+        <meta property="og:ttl" content="3600">
+        <!-- Favicon-->
+        <link rel="stylesheet" href="../../../cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="icon" type="image/x-icon" href="../Logo_PTPN4.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="../../../use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../guest/css/styles.css" rel="stylesheet" />
+        
+        <script defer src="../../../cdn.jsdelivr.net/npm/alpinejs%403.x.x/dist/cdn.min.js"></script>
+        <script src="../../../code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="../../../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <style>
+      .heading {
+        height: 8rem;
+        background-color: black;
+      }
+
+      @media (max-width: 992px) {
+        .heading {
+          opacity: 0;
+        }
+      }
+      
+      .root-container {
+        height: min-content;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+      }
+
+      /* .root-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: right;
+        background-image: url('http://118.97.163.52:8182/magang/background/Startup-planning.png');
+        z-index: -1;
+        background-color: rgba(red, green, blue, alpha)
+      } */
+
+      input {
+        height: auto !important;
+        padding: 1.25rem !important;
+      }
+      select {
+        height: auto !important;
+        padding: 1.25rem !important;
+      }
+
+      .flatpickr-month {
+        height: 80px !important;
+        font-size: 15px !important;
+      }
+
+      .flatpickr-monthDropdown-months {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+
+      .numInputWrapper {
+        width: 40% !important;
+      }
+
+
+    </style>
+
+<script>
+
+function handler() {
+    return {
+      form: {},
+      errors: {},
+      isLoading: false,
+      areas: [{"kode_area":"EH1A","nama_area":"Kantor Direksi","subarea":[{"kode_subarea":"DPM","induk":null,"kuota_total":null,"nama_subarea":"Distrik Petani Mitra","description":"Distrik Petani Mitra","kode_area":"EH1A","icon":"fa-solid fa-industry"},{"kode_subarea":"HKM","induk":null,"kuota_total":null,"nama_subarea":"Hukum","description":"Hukum","kode_area":"EH1A","icon":"fa-solid fa-scale-balanced"},{"kode_subarea":"KEU","induk":null,"kuota_total":null,"nama_subarea":"Keuangan","description":"Keuangan","kode_area":"EH1A","icon":"fa-solid fa-money-check-dollar"},{"kode_subarea":"PLP","induk":null,"kuota_total":null,"nama_subarea":"Pengadaan dan Teknologi Informasi","description":"Pengadaan dan Teknologi Informasi","kode_area":"EH1A","icon":"fa-solid fa-box"},{"kode_subarea":"PST","induk":null,"kuota_total":null,"nama_subarea":"Project Management Office","description":"Project Management Office","kode_area":"EH1A","icon":"fa-solid fa-computer"},{"kode_subarea":"SDM","induk":null,"kuota_total":null,"nama_subarea":"Sumber Daya Manusia","description":"Sumber Daya Manusia","kode_area":"EH1A","icon":"fa-solid fa-users-line"},{"kode_subarea":"SPI","induk":null,"kuota_total":null,"nama_subarea":"Satuan Pengawasan Internal","description":"Satuan Pengawasan Internal","kode_area":"EH1A","icon":"fa-solid fa-shield-halved"},{"kode_subarea":"SPR","induk":null,"kuota_total":null,"nama_subarea":"Sekretariat Perusahaan","description":"Sekretariat Perusahaan","kode_area":"EH1A","icon":"fa-solid fa-building"},{"kode_subarea":"TEP","induk":null,"kuota_total":null,"nama_subarea":"Teknik dan Pengolahan","description":"Teknik dan Pengolahan","kode_area":"EH1A","icon":"fa-solid fa-industry"},{"kode_subarea":"TNM","induk":null,"kuota_total":null,"nama_subarea":"Tanaman","description":"Tanaman","kode_area":"EH1A","icon":"fa-solid fa-tree"}]},{"kode_area":"EK1A","nama_area":"Kebun","subarea":[{"kode_subarea":"EK01","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Galuh","description":"Kebun Sei Galuh","kode_area":"EK1A","icon":null},{"kode_subarea":"EK02","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Garo","description":"Kebun Sei Garo","kode_area":"EK1A","icon":null},{"kode_subarea":"EK03","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Pagar","description":"Kebun Sei Pagar","kode_area":"EK1A","icon":null},{"kode_subarea":"EK04","induk":null,"kuota_total":null,"nama_subarea":"Kebun Tanjung Medan","description":"Kebun Tanjung Medan","kode_area":"EK1A","icon":null},{"kode_subarea":"EK05","induk":null,"kuota_total":null,"nama_subarea":"Kebun Tanah Putih","description":"Kebun Tanah Putih","kode_area":"EK1A","icon":null},{"kode_subarea":"EK06","induk":null,"kuota_total":null,"nama_subarea":"TBS Sei Garo","description":"TBS Sei Garo","kode_area":"EK1A","icon":null},{"kode_subarea":"EK07","induk":null,"kuota_total":null,"nama_subarea":"TBS.Tanah Putih","description":"TBS.Tanah Putih","kode_area":"EK1A","icon":null},{"kode_subarea":"EK08","induk":null,"kuota_total":null,"nama_subarea":"Kebun Lubuk Dalam","description":"Kebun Lubuk Dalam","kode_area":"EK1A","icon":null},{"kode_subarea":"EK09","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Buatan","description":"Kebun Sei Buatan","kode_area":"EK1A","icon":null},{"kode_subarea":"EK10","induk":null,"kuota_total":null,"nama_subarea":"Kebun AirMolek 1","description":"Kebun AirMolek 1","kode_area":"EK1A","icon":null},{"kode_subarea":"EK11","induk":null,"kuota_total":null,"nama_subarea":"Kebun AirMolek II","description":"Kebun AirMolek II","kode_area":"EK1A","icon":null},{"kode_subarea":"EK12","induk":null,"kuota_total":null,"nama_subarea":"TBS.Sei Buatan","description":"TBS.Sei Buatan","kode_area":"EK1A","icon":null},{"kode_subarea":"EK13","induk":null,"kuota_total":null,"nama_subarea":"Kebun Tandun","description":"Kebun Tandun","kode_area":"EK1A","icon":null},{"kode_subarea":"EK14","induk":null,"kuota_total":null,"nama_subarea":"Kebun Terantam","description":"Kebun Terantam","kode_area":"EK1A","icon":null},{"kode_subarea":"EK15","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Kencana","description":"Kebun Sei Kencana","kode_area":"EK1A","icon":null},{"kode_subarea":"EK16","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Lindai","description":"Kebun Sei Lindai","kode_area":"EK1A","icon":null},{"kode_subarea":"EK17","induk":null,"kuota_total":null,"nama_subarea":"Kebun Tamora","description":"Kebun Tamora","kode_area":"EK1A","icon":null},{"kode_subarea":"EK18","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Batulangkah","description":"Kebun Sei Batulangkah","kode_area":"EK1A","icon":null},{"kode_subarea":"EK20","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Rokan","description":"Kebun Sei Rokan","kode_area":"EK1A","icon":null},{"kode_subarea":"EK21","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Intan","description":"Kebun Sei Intan","kode_area":"EK1A","icon":null},{"kode_subarea":"EK22","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Siasam","description":"Kebun Sei Siasam","kode_area":"EK1A","icon":null},{"kode_subarea":"EK23","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Tapung","description":"Kebun Sei Tapung","kode_area":"EK1A","icon":null},{"kode_subarea":"EK24","induk":null,"kuota_total":null,"nama_subarea":"Kebun Sei Berlian","description":"Kebun Sei Berlian","kode_area":"EK1A","icon":null},{"kode_subarea":"EK25","induk":null,"kuota_total":null,"nama_subarea":"TBS.Sei Tapung","description":"TBS.Sei Tapung","kode_area":"EK1A","icon":null},{"kode_subarea":"N5M","induk":null,"kuota_total":null,"nama_subarea":"PT. Nusa Lima Medika","description":"-","kode_area":"EK1A","icon":null}]},{"kode_area":"EP1A","nama_area":"Pabrik","subarea":[{"kode_subarea":"EP01","induk":null,"kuota_total":null,"nama_subarea":"PKS Tanah Putih","description":"PKS Tanah Putih","kode_area":"EP1A","icon":null},{"kode_subarea":"EP02","induk":null,"kuota_total":null,"nama_subarea":"PKS Tjg Medan","description":"PKS Tjg Medan","kode_area":"EP1A","icon":null},{"kode_subarea":"EP03","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Galuh","description":"PKS Sei Galuh","kode_area":"EP1A","icon":null},{"kode_subarea":"EP04","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Pagar","description":"PKS Sei Pagar","kode_area":"EP1A","icon":null},{"kode_subarea":"EP05","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Garo","description":"PKS Sei Garo","kode_area":"EP1A","icon":null},{"kode_subarea":"EP06","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Buatan","description":"PKS Sei Buatan","kode_area":"EP1A","icon":null},{"kode_subarea":"EP07","induk":null,"kuota_total":null,"nama_subarea":"PKS Lubuk Dalam","description":"PKS Lubuk Dalam","kode_area":"EP1A","icon":null},{"kode_subarea":"EP08","induk":null,"kuota_total":null,"nama_subarea":"PKS Tandun","description":"PKS Tandun","kode_area":"EP1A","icon":null},{"kode_subarea":"EP09","induk":null,"kuota_total":null,"nama_subarea":"PKS Terantam","description":"PKS Terantam","kode_area":"EP1A","icon":null},{"kode_subarea":"EP10","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Tapung","description":"PKS Sei Tapung","kode_area":"EP1A","icon":null},{"kode_subarea":"EP11","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Rokan","description":"PKS Sei Rokan","kode_area":"EP1A","icon":null},{"kode_subarea":"EP12","induk":null,"kuota_total":null,"nama_subarea":"PKS Sei Intan","description":"PKS Sei Intan","kode_area":"EP1A","icon":null},{"kode_subarea":"EP13","induk":null,"kuota_total":null,"nama_subarea":"PKO Tandun","description":"PKO Tandun","kode_area":"EP1A","icon":null},{"kode_subarea":"EP14","induk":null,"kuota_total":null,"nama_subarea":"PPKR Sei Lindai","description":"PPKR Sei Lindai","kode_area":"EP1A","icon":null},{"kode_subarea":"EP15","induk":null,"kuota_total":null,"nama_subarea":"PPKR B.Selasih","description":"PPKR B.Selasih","kode_area":"EP1A","icon":null}]}],
+      jenjangPendidikan: [{"id":2,"nama_jenjang":"SMA\/SMK","is_aktif":1,"is_need_fakultas":0},{"id":3,"nama_jenjang":"S1\/D4\/D3","is_aktif":1,"is_need_fakultas":1}],
+      subareas: [],
+      bidang: [],  // Tambahkan bidang ke state
+      isNeedFakultas: false,
+
+      // Fungsi untuk merespons perubahan jenjang pendidikan
+      changeJenjangPendidikan() {
+        const jenjang = this.jenjangPendidikan.filter((data) => {
+          if (data.id == this.form.id_jenjang_pendidikan) {
+            this.isNeedFakultas = data.is_need_fakultas
+            if (!this.isNeedFakultas) {
+              const { fakultas, ...rest } = this.form;
+              this.form = rest;
+            } else {
+              this.form.fakultas = "";
+            }
+            return;
+          }
+        });
+      },
+
+      // Fungsi untuk merespons perubahan area dan memuat subarea yang sesuai
+      renderSubArea() {
+        const subarea = this.areas.filter((data) => data.kode_area == this.form.kode_area);
+        if (subarea.length) {
+          this.subareas = subarea[0].subarea;
+          this.form.kode_subarea = '';  // Reset pilihan subarea
+          this.bidang = [];  // Reset pilihan bidang setiap kali area berubah
+        }
+      },
+
+      // Render bidang setelah subarea dipilih
+      renderBidang() {
+          if (this.form.kode_subarea) {
+              axios.get(`http://118.97.163.52:8182/magang/api/get-bidang/${this.form.kode_subarea}`)
+                  .then((response) => {
+                      // Filter bidang yang kuotanya lebih dari 0
+                      this.bidang = response.data.filter(bidang => bidang.kuota > 0);
+                      this.form.kode_bidang = ''; // Reset pilihan bidang
+                  })
+                  .catch((error) => {
+                      console.error(error);
+                  });
+          } else {
+              this.bidang = []; // Reset jika subarea belum dipilih
+          }
+      },
+
+      // Fungsi untuk menyimpan form
+      async store(e) {
+        this.isLoading = true;
+        this.errors = {};
+        console.log(this.form);
+        const url = e.target.action;
+        await axios.post(url, this.form, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }).then((response) => {
+          location.reload();
+        }).catch((e) => {
+          if (e.response.status == 422) {
+            this.errors = e.response.data.errors;
+          }
+        });
+        this.isLoading = false;
+      },
+
+      // Fungsi untuk mereset input file
+      resetInputFile() {
+        $("input[type='file']").val('');
+      }
+    }
+  }
+
+</script>
+    <link rel='stylesheet' type='text/css' property='stylesheet' href='http://118.97.163.52:8182/_debugbar/assets/stylesheets?v=1710323434&amp;theme=auto' data-turbolinks-eval='false' data-turbo-eval='false'><script src='http://118.97.163.52:8182/_debugbar/assets/javascript?v=1710323434' data-turbolinks-eval='false' data-turbo-eval='false'></script><script data-turbo-eval='false'>jQuery.noConflict(true);</script>
+<script> Sfdump = window.Sfdump || (function (doc) { doc.documentElement.classList.add('sf-js-enabled'); var rxEsc = /([.*+?^${}()|\[\]\/\\])/g, idRx = /\bsf-dump-\d+-ref[012]\w+\b/, keyHint = 0 <= navigator.platform.toUpperCase().indexOf('MAC') ? 'Cmd' : 'Ctrl', addEventListener = function (e, n, cb) { e.addEventListener(n, cb, false); }; if (!doc.addEventListener) { addEventListener = function (element, eventName, callback) { element.attachEvent('on' + eventName, function (e) { e.preventDefault = function () {e.returnValue = false;}; e.target = e.srcElement; callback(e); }); }; } function toggle(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className, arrow, newClass; if (/\bsf-dump-compact\b/.test(oldClass)) { arrow = '▼'; newClass = 'sf-dump-expanded'; } else if (/\bsf-dump-expanded\b/.test(oldClass)) { arrow = '▶'; newClass = 'sf-dump-compact'; } else { return false; } if (doc.createEvent && s.dispatchEvent) { var event = doc.createEvent('Event'); event.initEvent('sf-dump-expanded' === newClass ? 'sfbeforedumpexpand' : 'sfbeforedumpcollapse', true, false); s.dispatchEvent(event); } a.lastChild.innerHTML = arrow; s.className = s.className.replace(/\bsf-dump-(compact|expanded)\b/, newClass); if (recursive) { try { a = s.querySelectorAll('.'+oldClass); for (s = 0; s < a.length; ++s) { if (-1 == a[s].className.indexOf(newClass)) { a[s].className = newClass; a[s].previousSibling.lastChild.innerHTML = arrow; } } } catch (e) { } } return true; }; function collapse(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className; if (/\bsf-dump-expanded\b/.test(oldClass)) { toggle(a, recursive); return true; } return false; }; function expand(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className; if (/\bsf-dump-compact\b/.test(oldClass)) { toggle(a, recursive); return true; } return false; }; function collapseAll(root) { var a = root.querySelector('a.sf-dump-toggle'); if (a) { collapse(a, true); expand(a); return true; } return false; } function reveal(node) { var previous, parents = []; while ((node = node.parentNode || {}) && (previous = node.previousSibling) && 'A' === previous.tagName) { parents.push(previous); } if (0 !== parents.length) { parents.forEach(function (parent) { expand(parent); }); return true; } return false; } function highlight(root, activeNode, nodes) { resetHighlightedNodes(root); Array.from(nodes||[]).forEach(function (node) { if (!/\bsf-dump-highlight\b/.test(node.className)) { node.className = node.className + ' sf-dump-highlight'; } }); if (!/\bsf-dump-highlight-active\b/.test(activeNode.className)) { activeNode.className = activeNode.className + ' sf-dump-highlight-active'; } } function resetHighlightedNodes(root) { Array.from(root.querySelectorAll('.sf-dump-str, .sf-dump-key, .sf-dump-public, .sf-dump-protected, .sf-dump-private')).forEach(function (strNode) { strNode.className = strNode.className.replace(/\bsf-dump-highlight\b/, ''); strNode.className = strNode.className.replace(/\bsf-dump-highlight-active\b/, ''); }); } return function (root, x) { root = doc.getElementById(root); var indentRx = new RegExp('^('+(root.getAttribute('data-indent-pad') || ' ').replace(rxEsc, '\\$1')+')+', 'm'), options = {"maxDepth":1,"maxStringLength":160,"fileLinkFormat":false}, elt = root.getElementsByTagName('A'), len = elt.length, i = 0, s, h, t = []; while (i < len) t.push(elt[i++]); for (i in x) { options[i] = x[i]; } function a(e, f) { addEventListener(root, e, function (e, n) { if ('A' == e.target.tagName) { f(e.target, e); } else if ('A' == e.target.parentNode.tagName) { f(e.target.parentNode, e); } else { n = /\bsf-dump-ellipsis\b/.test(e.target.className) ? e.target.parentNode : e.target; if ((n = n.nextElementSibling) && 'A' == n.tagName) { if (!/\bsf-dump-toggle\b/.test(n.className)) { n = n.nextElementSibling || n; } f(n, e, true); } } }); }; function isCtrlKey(e) { return e.ctrlKey || e.metaKey; } function xpathString(str) { var parts = str.match(/[^'"]+|['"]/g).map(function (part) { if ("'" == part) { return '"\'"'; } if ('"' == part) { return "'\"'"; } return "'" + part + "'"; }); return "concat(" + parts.join(",") + ", '')"; } function xpathHasClass(className) { return "contains(concat(' ', normalize-space(@class), ' '), ' " + className +" ')"; } a('mouseover', function (a, e, c) { if (c) { e.target.style.cursor = "pointer"; } }); a('click', function (a, e, c) { if (/\bsf-dump-toggle\b/.test(a.className)) { e.preventDefault(); if (!toggle(a, isCtrlKey(e))) { var r = doc.getElementById(a.getAttribute('href').slice(1)), s = r.previousSibling, f = r.parentNode, t = a.parentNode; t.replaceChild(r, a); f.replaceChild(a, s); t.insertBefore(s, r); f = f.firstChild.nodeValue.match(indentRx); t = t.firstChild.nodeValue.match(indentRx); if (f && t && f[0] !== t[0]) { r.innerHTML = r.innerHTML.replace(new RegExp('^'+f[0].replace(rxEsc, '\\$1'), 'mg'), t[0]); } if (/\bsf-dump-compact\b/.test(r.className)) { toggle(s, isCtrlKey(e)); } } if (c) { } else if (doc.getSelection) { try { doc.getSelection().removeAllRanges(); } catch (e) { doc.getSelection().empty(); } } else { doc.selection.empty(); } } else if (/\bsf-dump-str-toggle\b/.test(a.className)) { e.preventDefault(); e = a.parentNode.parentNode; e.className = e.className.replace(/\bsf-dump-str-(expand|collapse)\b/, a.parentNode.className); } }); elt = root.getElementsByTagName('SAMP'); len = elt.length; i = 0; while (i < len) t.push(elt[i++]); len = t.length; for (i = 0; i < len; ++i) { elt = t[i]; if ('SAMP' == elt.tagName) { a = elt.previousSibling || {}; if ('A' != a.tagName) { a = doc.createElement('A'); a.className = 'sf-dump-ref'; elt.parentNode.insertBefore(a, elt); } else { a.innerHTML += ' '; } a.title = (a.title ? a.title+'\n[' : '[')+keyHint+'+click] Expand all children'; a.innerHTML += elt.className == 'sf-dump-compact' ? '<span>▶</span>' : '<span>▼</span>'; a.className += ' sf-dump-toggle'; x = 1; if ('sf-dump' != elt.parentNode.className) { x += elt.parentNode.getAttribute('data-depth')/1; } } else if (/\bsf-dump-ref\b/.test(elt.className) && (a = elt.getAttribute('href'))) { a = a.slice(1); elt.className += ' sf-dump-hover'; elt.className += ' '+a; if (/[\[{]$/.test(elt.previousSibling.nodeValue)) { a = a != elt.nextSibling.id && doc.getElementById(a); try { s = a.nextSibling; elt.appendChild(a); s.parentNode.insertBefore(a, s); if (/^[@#]/.test(elt.innerHTML)) { elt.innerHTML += ' <span>▶</span>'; } else { elt.innerHTML = '<span>▶</span>'; elt.className = 'sf-dump-ref'; } elt.className += ' sf-dump-toggle'; } catch (e) { if ('&' == elt.innerHTML.charAt(0)) { elt.innerHTML = '…'; elt.className = 'sf-dump-ref'; } } } } } if (doc.evaluate && Array.from && root.children.length > 1) { root.setAttribute('tabindex', 0); SearchState = function () { this.nodes = []; this.idx = 0; }; SearchState.prototype = { next: function () { if (this.isEmpty()) { return this.current(); } this.idx = this.idx < (this.nodes.length - 1) ? this.idx + 1 : 0; return this.current(); }, previous: function () { if (this.isEmpty()) { return this.current(); } this.idx = this.idx > 0 ? this.idx - 1 : (this.nodes.length - 1); return this.current(); }, isEmpty: function () { return 0 === this.count(); }, current: function () { if (this.isEmpty()) { return null; } return this.nodes[this.idx]; }, reset: function () { this.nodes = []; this.idx = 0; }, count: function () { return this.nodes.length; }, }; function showCurrent(state) { var currentNode = state.current(), currentRect, searchRect; if (currentNode) { reveal(currentNode); highlight(root, currentNode, state.nodes); if ('scrollIntoView' in currentNode) { currentNode.scrollIntoView(true); currentRect = currentNode.getBoundingClientRect(); searchRect = search.getBoundingClientRect(); if (currentRect.top < (searchRect.top + searchRect.height)) { window.scrollBy(0, -(searchRect.top + searchRect.height + 5)); } } } counter.textContent = (state.isEmpty() ? 0 : state.idx + 1) + ' of ' + state.count(); } var search = doc.createElement('div'); search.className = 'sf-dump-search-wrapper sf-dump-search-hidden'; search.innerHTML = ' <input type="text" class="sf-dump-search-input"> <span class="sf-dump-search-count">0 of 0<\/span> <button type="button" class="sf-dump-search-input-previous" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19L896 965l-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> <button type="button" class="sf-dump-search-input-next" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 808l-742 741q-19 19-45 19t-45-19L109 808q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> '; root.insertBefore(search, root.firstChild); var state = new SearchState(); var searchInput = search.querySelector('.sf-dump-search-input'); var counter = search.querySelector('.sf-dump-search-count'); var searchInputTimer = 0; var previousSearchQuery = ''; addEventListener(searchInput, 'keyup', function (e) { var searchQuery = e.target.value; /* Don't perform anything if the pressed key didn't change the query */ if (searchQuery === previousSearchQuery) { return; } previousSearchQuery = searchQuery; clearTimeout(searchInputTimer); searchInputTimer = setTimeout(function () { state.reset(); collapseAll(root); resetHighlightedNodes(root); if ('' === searchQuery) { counter.textContent = '0 of 0'; return; } var classMatches = [ "sf-dump-str", "sf-dump-key", "sf-dump-public", "sf-dump-protected", "sf-dump-private", ].map(xpathHasClass).join(' or '); var xpathResult = doc.evaluate('.//span[' + classMatches + '][contains(translate(child::text(), ' + xpathString(searchQuery.toUpperCase()) + ', ' + xpathString(searchQuery.toLowerCase()) + '), ' + xpathString(searchQuery.toLowerCase()) + ')]', root, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null); while (node = xpathResult.iterateNext()) state.nodes.push(node); showCurrent(state); }, 400); }); Array.from(search.querySelectorAll('.sf-dump-search-input-next, .sf-dump-search-input-previous')).forEach(function (btn) { addEventListener(btn, 'click', function (e) { e.preventDefault(); -1 !== e.target.className.indexOf('next') ? state.next() : state.previous(); searchInput.focus(); collapseAll(root); showCurrent(state); }) }); addEventListener(root, 'keydown', function (e) { var isSearchActive = !/\bsf-dump-search-hidden\b/.test(search.className); if ((114 === e.keyCode && !isSearchActive) || (isCtrlKey(e) && 70 === e.keyCode)) { /* F3 or CMD/CTRL + F */ if (70 === e.keyCode && document.activeElement === searchInput) { /* * If CMD/CTRL + F is hit while having focus on search input, * the user probably meant to trigger browser search instead. * Let the browser execute its behavior: */ return; } e.preventDefault(); search.className = search.className.replace(/\bsf-dump-search-hidden\b/, ''); searchInput.focus(); } else if (isSearchActive) { if (27 === e.keyCode) { /* ESC key */ search.className += ' sf-dump-search-hidden'; e.preventDefault(); resetHighlightedNodes(root); searchInput.value = ''; } else if ( (isCtrlKey(e) && 71 === e.keyCode) /* CMD/CTRL + G */ || 13 === e.keyCode /* Enter */ || 114 === e.keyCode /* F3 */ ) { e.preventDefault(); e.shiftKey ? state.previous() : state.next(); collapseAll(root); showCurrent(state); } } }); } if (0 >= options.maxStringLength) { return; } try { elt = root.querySelectorAll('.sf-dump-str'); len = elt.length; i = 0; t = []; while (i < len) t.push(elt[i++]); len = t.length; for (i = 0; i < len; ++i) { elt = t[i]; s = elt.innerText || elt.textContent; x = s.length - options.maxStringLength; if (0 < x) { h = elt.innerHTML; elt[elt.innerText ? 'innerText' : 'textContent'] = s.substring(0, options.maxStringLength); elt.className += ' sf-dump-str-collapse'; elt.innerHTML = '<span class=sf-dump-str-collapse>'+h+'<a class="sf-dump-ref sf-dump-str-toggle" title="Collapse"> ◀</a></span>'+ '<span class=sf-dump-str-expand>'+elt.innerHTML+'<a class="sf-dump-ref sf-dump-str-toggle" title="'+x+' remaining characters"> ▶</a></span>'; } } } catch (e) { } }; })(document); </script><style> .sf-js-enabled .phpdebugbar pre.sf-dump .sf-dump-compact, .sf-js-enabled .sf-dump-str-collapse .sf-dump-str-collapse, .sf-js-enabled .sf-dump-str-expand .sf-dump-str-expand { display: none; } .sf-dump-hover:hover { background-color: #B729D9; color: #FFF !important; border-radius: 2px; } .phpdebugbar pre.sf-dump { display: block; white-space: pre; padding: 5px; overflow: initial !important; } .phpdebugbar pre.sf-dump:after { content: ""; visibility: hidden; display: block; height: 0; clear: both; } .phpdebugbar pre.sf-dump span { display: inline-flex; } .phpdebugbar pre.sf-dump a { text-decoration: none; cursor: pointer; border: 0; outline: none; color: inherit; } .phpdebugbar pre.sf-dump img { max-width: 50em; max-height: 50em; margin: .5em 0 0 0; padding: 0; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAHUlEQVQY02O8zAABilCaiQEN0EeA8QuUcX9g3QEAAjcC5piyhyEAAAAASUVORK5CYII=) #D3D3D3; } .phpdebugbar pre.sf-dump .sf-dump-ellipsis { display: inline-block; overflow: visible; text-overflow: ellipsis; max-width: 5em; white-space: nowrap; overflow: hidden; vertical-align: top; } .phpdebugbar pre.sf-dump .sf-dump-ellipsis+.sf-dump-ellipsis { max-width: none; } .phpdebugbar pre.sf-dump code { display:inline; padding:0; background:none; } .sf-dump-public.sf-dump-highlight, .sf-dump-protected.sf-dump-highlight, .sf-dump-private.sf-dump-highlight, .sf-dump-str.sf-dump-highlight, .sf-dump-key.sf-dump-highlight { background: rgba(111, 172, 204, 0.3); border: 1px solid #7DA0B1; border-radius: 3px; } .sf-dump-public.sf-dump-highlight-active, .sf-dump-protected.sf-dump-highlight-active, .sf-dump-private.sf-dump-highlight-active, .sf-dump-str.sf-dump-highlight-active, .sf-dump-key.sf-dump-highlight-active { background: rgba(253, 175, 0, 0.4); border: 1px solid #ffa500; border-radius: 3px; } .phpdebugbar pre.sf-dump .sf-dump-search-hidden { display: none !important; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper { font-size: 0; white-space: nowrap; margin-bottom: 5px; display: flex; position: -webkit-sticky; position: sticky; top: 5px; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > * { vertical-align: top; box-sizing: border-box; height: 21px; font-weight: normal; border-radius: 0; background: #FFF; color: #757575; border: 1px solid #BBB; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > input.sf-dump-search-input { padding: 3px; height: 21px; font-size: 12px; border-right: none; border-top-left-radius: 3px; border-bottom-left-radius: 3px; color: #000; min-width: 15px; width: 100%; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-next, .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-previous { background: #F2F2F2; outline: none; border-left: none; font-size: 0; line-height: 0; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-next { border-top-right-radius: 3px; border-bottom-right-radius: 3px; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-next > svg, .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-previous > svg { pointer-events: none; width: 12px; height: 12px; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-count { display: inline-block; padding: 0 5px; margin: 0; border-left: none; line-height: 21px; font-size: 12px; }.phpdebugbar pre.sf-dump, .phpdebugbar pre.sf-dump .sf-dump-default{word-wrap: break-word; white-space: pre-wrap; word-break: normal}.phpdebugbar pre.sf-dump .sf-dump-num{font-weight:bold; color:#1299DA}.phpdebugbar pre.sf-dump .sf-dump-const{font-weight:bold}.phpdebugbar pre.sf-dump .sf-dump-str{font-weight:bold; color:#3A9B26}.phpdebugbar pre.sf-dump .sf-dump-note{color:#1299DA}.phpdebugbar pre.sf-dump .sf-dump-ref{color:#7B7B7B}.phpdebugbar pre.sf-dump .sf-dump-public{color:#000000}.phpdebugbar pre.sf-dump .sf-dump-protected{color:#000000}.phpdebugbar pre.sf-dump .sf-dump-private{color:#000000}.phpdebugbar pre.sf-dump .sf-dump-meta{color:#B729D9}.phpdebugbar pre.sf-dump .sf-dump-key{color:#3A9B26}.phpdebugbar pre.sf-dump .sf-dump-index{color:#1299DA}.phpdebugbar pre.sf-dump .sf-dump-ellipsis{color:#A0A000}.phpdebugbar pre.sf-dump .sf-dump-ns{user-select:none;}.phpdebugbar pre.sf-dump .sf-dump-ellipsis-note{color:#1299DA}</style>
+</head>
+    <body id="page-top">
+        <!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+      <a class="navbar-brand" href="../home.html"><img src="../img/Logo_PTPN4.png" alt="..." /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+              <li class="nav-item"><a class="nav-link " href="../home.html">Beranda</a></li>
+              <li class="nav-item"><a class="nav-link  active " href="../pengajuan.html">Pengajuan</a></li>
+              <li class="nav-item"><a class="nav-link " href="../tracking-pengajuan.html">Cek Pengajuan</a></li>
+              <li class="nav-item"><a class="nav-link " href="../idcard.html">ID Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="../log-in.html">Login</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+        <div class="heading">
+
+</div>
+<div x-data="handler" x-init="resetInputFile" class="root-container">
+  <div class="container" style="padding-top: 3rem">
+    <h3 class="text-center"><u>Pengajuan Penelitian</u></h3>
+    <h4 class="text-center">Silahkan Mengisi Form Dibawah Ini</h4>
+    <div class="jumbotron mt-3 bg-light jumbotron-fluid">
+      <div class="container">
+        <h6>Petunjuk Pengisian:</h6>
+        <ol style="list-style: decimal">
+          <li>Inputan yang bertanda <span class="text-danger">*</span> wajib diisi</li>
+                  </ol>
+      </div>
+    </div>
+    <form @submit.prevent="store" action="http://118.97.163.52:8182/magang/pengajuan" method="POST" enctype="multipart/form-data" class="mt-4">
+      <input type="hidden" x-model="form.id_jenis_pengajuan" x-init="form.id_jenis_pengajuan = `6`">
+      <input type="hidden" name="_token" value="NEr4elhnWx80EkKCrWn58WkQ5XsqFJRXbLfQU03r" autocomplete="off">                  <div class="row">
+          <div class="col-lg-6 col-sm-12">
+                          <div class="form-group mb-3">
+                <label for="nama" class="form-label"><span class="text-danger">*</span> Nama</label>
+                <input type="text" x-model="form.nama" name="nama" class="form-control" :class="{'is-invalid': errors.nama}" id="nama" placeholder="Masukkan nama anda">
+                <template x-if="errors.nama">
+                  <div class="invalid-feedback" x-text="errors.nama"></div>
+                </template>
+            </div>
+            <div class="mb-3">
+                <label for="jenis_kelamin" class="form-label"><span class="text-danger">*</span> Jenis Kelamin</label>
+                <select x-model="form.jenis_kelamin" class="form-select" :class="{'is-invalid': errors.jenis_kelamin}" id="jenis_kelamin" name="jenis_kelamin" aria-label="Default select example">
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="L">Laki-Laki</option>
+                    <option value="P">Perempuan</option>
+                </select>
+                <template x-if="errors.jenis_kelamin">
+                  <div class="invalid-feedback" x-text="errors.jenis_kelamin"></div>
+                </template>
+            </div>
+              <div class="mb-3">
+                <label for="nama_lembaga_pendidikan" class="form-label"><span class="text-danger">*</span> Nama Kampus/Sekolah</label>
+                <input list="lembaga_pendidikan_list" type="text" x-model="form.nama_lembaga_pendidikan" value="" name="nama_lembaga_pendidikan" class="form-control" :class="{'is-invalid': errors.nama_lembaga_pendidikan}" id="nama_lembaga_pendidikan" placeholder="Masukkan Nama Kampus/Sekolah Anda" autocomplete="off">
+                <datalist id="lembaga_pendidikan_list">
+                                        <option value="Universitas Muhammadiyah Riau">Universitas Muhammadiyah Riau</option>
+                                        <option value="Politeknik Caltex Riau">Politeknik Caltex Riau</option>
+                                        <option value="politeknik lpp yogyakarta">politeknik lpp yogyakarta</option>
+                                        <option value="Universitas Riau">Universitas Riau</option>
+                                        <option value="SMK MIGAS BUMI MELAYU RIAU">SMK MIGAS BUMI MELAYU RIAU</option>
+                                        <option value="SMK Muhammadiyah 3 terpadu Pekanbaru">SMK Muhammadiyah 3 terpadu Pekanbaru</option>
+                                        <option value="Universitas Pahlawan Tuanku Tambusai">Universitas Pahlawan Tuanku Tambusai</option>
+                                        <option value="UIN SUSKA RIAU">UIN SUSKA RIAU</option>
+                                        <option value="SMK Negeri 4 Pekanbaru">SMK Negeri 4 Pekanbaru</option>
+                                        <option value="Universitas pahlawan">Universitas pahlawan</option>
+                                        <option value="SMK Negeri 6 Pekanbaru">SMK Negeri 6 Pekanbaru</option>
+                                        <option value="SMK KANSAI PEKANBARU">SMK KANSAI PEKANBARU</option>
+                                        <option value="Politeknik Negeri Bengkalis">Politeknik Negeri Bengkalis</option>
+                                        <option value="Universitas Islam Negeri Sultan Syarif Kasim Riau">Universitas Islam Negeri Sultan Syarif Kasim Riau</option>
+                                        <option value="Universitas Sains dan Teknologi Indonesia">Universitas Sains dan Teknologi Indonesia</option>
+                                        <option value="Universitas Lancang Kuning">Universitas Lancang Kuning</option>
+                                        <option value="SMK NEGERI 1 SIAK HULU">SMK NEGERI 1 SIAK HULU</option>
+                                        <option value="SMK N 1 TAPUNG HILIR">SMK N 1 TAPUNG HILIR</option>
+                                        <option value="SMKN 1 Pangkalan Kerinci">SMKN 1 Pangkalan Kerinci</option>
+                                        <option value="Institut Teknologi Del">Institut Teknologi Del</option>
+                                        <option value="UNIVERSITAS ISLAM RIAU">UNIVERSITAS ISLAM RIAU</option>
+                                        <option value="Universitas syekh mdjamil djambek bukittinggi">Universitas syekh mdjamil djambek bukittinggi</option>
+                                        <option value="SMKN 1 DAYUN">SMKN 1 DAYUN</option>
+                                        <option value="Ubiversitas Diponegoro">Ubiversitas Diponegoro</option>
+                                        <option value="Institut Pertanian Bogor">Institut Pertanian Bogor</option>
+                                        <option value="SMK Negeri 2 PEKANBARU">SMK Negeri 2 PEKANBARU</option>
+                                        <option value="SMKN 6 PEKANBARU">SMKN 6 PEKANBARU</option>
+                                        <option value="SMK TELKOM PEKANBARU">SMK TELKOM PEKANBARU</option>
+                                        <option value="SMK HASANAH PEKANBARU">SMK HASANAH PEKANBARU</option>
+                                        <option value="Universitas Telkom">Universitas Telkom</option>
+                                        <option value="Sekolah Tinggi Agama Islam ( STAI) Nurul Falah Air Molek">Sekolah Tinggi Agama Islam ( STAI) Nurul Falah Air Molek</option>
+                                        <option value="SMKN 01 lubuk dalam">SMKN 01 lubuk dalam</option>
+                                        <option value="SMK KEUANGAN">SMK KEUANGAN</option>
+                                        <option value="SMK NEGERI 8 PEKANBARU">SMK NEGERI 8 PEKANBARU</option>
+                                        <option value="SMKN 01 lubuk dalam la">SMKN 01 lubuk dalam la</option>
+                                        <option value="Politeknik Kampar">Politeknik Kampar</option>
+                                        <option value="universitas mohammad husni thamrin">universitas mohammad husni thamrin</option>
+                                        <option value="Universitas Islam Negeri Sultan Syarim Kasim Riau">Universitas Islam Negeri Sultan Syarim Kasim Riau</option>
+                                        <option value="SMK Negeri 1 Dayun">SMK Negeri 1 Dayun</option>
+                                        <option value="Universitas Pembangunan Nasional &quot;Veteran&quot; Yogyakarta">Universitas Pembangunan Nasional &quot;Veteran&quot; Yogyakarta</option>
+                                        <option value="SMKN6 PEKANBARU">SMKN6 PEKANBARU</option>
+                                        <option value="Institut Bisnis Teknologi Pelita Indonesia">Institut Bisnis Teknologi Pelita Indonesia</option>
+                                        <option value="Institut Bisnis Dan Teknologi Pelita Indonesia Pekanbaru">Institut Bisnis Dan Teknologi Pelita Indonesia Pekanbaru</option>
+                                        <option value="SMK SULTAN MUAZZAM SYAH">SMK SULTAN MUAZZAM SYAH</option>
+                                        <option value="Universitas Ahmad Dahlan">Universitas Ahmad Dahlan</option>
+                                        <option value="SMKN pertanian terpadu pekanbaru prov.riau">SMKN pertanian terpadu pekanbaru prov.riau</option>
+                                        <option value="Institut Pertanian STIPER Yogyakarta">Institut Pertanian STIPER Yogyakarta</option>
+                                        <option value="Al Insyirah">Al Insyirah</option>
+                                        <option value="President University">President University</option>
+                                        <option value="Universitas Islam Negeri sjech M. Djamil Djambek Bukittinggi">Universitas Islam Negeri sjech M. Djamil Djambek Bukittinggi</option>
+                                        <option value="PSDKU POLITEKNIK NEGERI SRIWIJAYA SIAK">PSDKU POLITEKNIK NEGERI SRIWIJAYA SIAK</option>
+                                        <option value="SMKN 2 PEKANBARU">SMKN 2 PEKANBARU</option>
+                                        <option value="Institut Bisnis Dan Teknologi Pelita Indonesia">Institut Bisnis Dan Teknologi Pelita Indonesia</option>
+                                        <option value="SMK N1 Tapung hilir">SMK N1 Tapung hilir</option>
+                                        <option value="SMKN PERTANIAN TERPADU PEKANBARU RIAU">SMKN PERTANIAN TERPADU PEKANBARU RIAU</option>
+                                        <option value="sekolah tinggi ilmu komunikasi pembangunan">sekolah tinggi ilmu komunikasi pembangunan</option>
+                                        <option value="Universitas Gadjah Mada">Universitas Gadjah Mada</option>
+                                        <option value="Universitas Brawijaya">Universitas Brawijaya</option>
+                                        <option value="SMK N 1 TAPUNG">SMK N 1 TAPUNG</option>
+                                        <option value="Universitas Terbuka">Universitas Terbuka</option>
+                                        <option value="IPB University">IPB University</option>
+                                        <option value="INSTIPER YOGYAKARYA">INSTIPER YOGYAKARYA</option>
+                                        <option value="SMK PERBANKAN RIAU">SMK PERBANKAN RIAU</option>
+                                        <option value="STIE Mahaputra Riau">STIE Mahaputra Riau</option>
+                                        <option value="SMK NEGERI 1 PEKANBARU">SMK NEGERI 1 PEKANBARU</option>
+                                        <option value="POLITEKNIK NEGRI SRIWIJAYA KAB. SIAK">POLITEKNIK NEGRI SRIWIJAYA KAB. SIAK</option>
+                                        <option value="Universitas islam indonesia">Universitas islam indonesia</option>
+                                        <option value="SMKN 1 Tapung">SMKN 1 Tapung</option>
+                                        <option value="Politeknik Lp3I Pekanbaru">Politeknik Lp3I Pekanbaru</option>
+                                        <option value="Universitas Andalas">Universitas Andalas</option>
+                                        <option value="SMKN NEGERI I TAPUNG">SMKN NEGERI I TAPUNG</option>
+                                        <option value="Telkom University">Telkom University</option>
+                                        <option value="SMKN PERTANIAN TERPADU PEKANBARU PROV RIAU">SMKN PERTANIAN TERPADU PEKANBARU PROV RIAU</option>
+                                        <option value="SMKN1 Gunung Sahilan">SMKN1 Gunung Sahilan</option>
+                                        <option value="SMK Gunung Sahilan">SMK Gunung Sahilan</option>
+                                        <option value="SMKN 1 PAYAKUMBUH">SMKN 1 PAYAKUMBUH</option>
+                                        <option value="SMKN NEGERI 1 Tapung">SMKN NEGERI 1 Tapung</option>
+                                        <option value="POLITEKNIK LP3I">POLITEKNIK LP3I</option>
+                                        <option value="SMK FARMASI IKASARI PEKANBARU">SMK FARMASI IKASARI PEKANBARU</option>
+                                        <option value="Universitas Indonesia">Universitas Indonesia</option>
+                                        <option value="Universitas Dharma Andalas">Universitas Dharma Andalas</option>
+                                        <option value="Universitsa Pembangunan Nasional &quot; Veteran&quot;">Universitsa Pembangunan Nasional &quot; Veteran&quot;</option>
+                                        <option value="Smkn 1 pkl Kerinci">Smkn 1 pkl Kerinci</option>
+                                        <option value="PSDKU Politeknik Negeri Sriwijaya Kab. Siak">PSDKU Politeknik Negeri Sriwijaya Kab. Siak</option>
+                                        <option value="Politeknik Negeri Jakarta">Politeknik Negeri Jakarta</option>
+                                        <option value="Universitas Sumatera Utara">Universitas Sumatera Utara</option>
+                                        <option value="SMK Negeri 7, Pekanbaru">SMK Negeri 7, Pekanbaru</option>
+                                        <option value="POLITEKNIK NEGERI SRIWIJAYA KAB. SIAK">POLITEKNIK NEGERI SRIWIJAYA KAB. SIAK</option>
+                                        <option value="UNIVERSITAS TADULAKO">UNIVERSITAS TADULAKO</option>
+                                        <option value="Politeknik Kelapa Sawit Citra Widya Edukasi">Politeknik Kelapa Sawit Citra Widya Edukasi</option>
+                                        <option value="TEst">TEst</option>
+                                        <option value="universitas diponegoro">universitas diponegoro</option>
+                                        <option value="Universitas Muhammadiyah Riau Pekanbaru">Universitas Muhammadiyah Riau Pekanbaru</option>
+                                        <option value="SMK NASIONAL AL-HUDA PEKANBARU">SMK NASIONAL AL-HUDA PEKANBARU</option>
+                                        <option value="Institut Teknologi Sawit Indonesia">Institut Teknologi Sawit Indonesia</option>
+                                        <option value="INSTIPER YOGYAKARTA">INSTIPER YOGYAKARTA</option>
+                                        <option value="Universitas Muhammadyah Riau">Universitas Muhammadyah Riau</option>
+                                        <option value="SMK Akbar Pekanbaru">SMK Akbar Pekanbaru</option>
+                                        <option value="Kyoto University">Kyoto University</option>
+                                        <option value="Universitas Muhhamadiyah Riau">Universitas Muhhamadiyah Riau</option>
+                                        <option value="Universitas Muhammadiyah Malang">Universitas Muhammadiyah Malang</option>
+                                        <option value="Institut teknologi dan bisnis master">Institut teknologi dan bisnis master</option>
+                                        <option value="Amik Mahaputra Riau">Amik Mahaputra Riau</option>
+                                        <option value="Univeraitas Islam Riau">Univeraitas Islam Riau</option>
+                                        <option value="Smkn1pangkalan kerinci">Smkn1pangkalan kerinci</option>
+                                        <option value="Politeknik Negeri Padang">Politeknik Negeri Padang</option>
+                                        <option value="SMKS TARUNA MASMUR">SMKS TARUNA MASMUR</option>
+                                        <option value="smkn 2 kec.guguak">smkn 2 kec.guguak</option>
+                                        <option value="Institut teknologi sumatera">Institut teknologi sumatera</option>
+                                        <option value="SMKF IKASARI Pekanbaru">SMKF IKASARI Pekanbaru</option>
+                                        <option value="Univer">Univer</option>
+                                        <option value="Universitas Pasundan">Universitas Pasundan</option>
+                                        <option value="Universitas Mercu Buana">Universitas Mercu Buana</option>
+                                        <option value="SMK MUHAMMADIYAH 3">SMK MUHAMMADIYAH 3</option>
+                                        <option value="SMKN 1 SIAK HULU">SMKN 1 SIAK HULU</option>
+                                  </datalist>
+                <template x-if="nama_lembaga_pendidikan">
+                  <div class="invalid-feedback" x-text="errors.nama_lemabaga_pendidikan"></div>
+                </template>
+              </div>
+              <div class="mb-3">
+                <label for="id_jenjang_pendidikan" class="form-label"><span class="text-danger">*</span> Jenjang Pendidikan</label>
+                <select @change="changeJenjangPendidikan" class="form-select" id="id_jenjang_pendidikan" :class="{'is-invalid': errors.id_jenjang_pendidikan}" x-model="form.id_jenjang_pendidikan" name="" id="">
+                  <option value="">Pilih Jenjang</option>
+                                        <option value="2">SMA/SMK</option>
+                                        <option value="3">S1/D4/D3</option>
+                                  </select>
+                <template x-if="errors.id_jenjang_pendidikan">
+                  <div class="invalid-feedback" x-text="errors.id_jenjang_pendidikan"></div>
+                </template>
+              </div>
+              <template x-if="isNeedFakultas">
+                <div class="mb-3">
+                  <label for="fakultas" class="form-label"><span class="text-danger">*</span> Fakultas</label>
+                  <input list="fakultas_list" type="text" x-model="form.fakultas" name="fakultas" class="form-control" :class="{'is-invalid': errors.fakultas}" id="fakultas" placeholder="Masukkan fakultas anda" autocomplete="off">
+                  <datalist id="fakultas_list">
+                                        <option value="Teknik">Teknik</option>
+                                        <option value="Sistem Informasi">Sistem Informasi</option>
+                                        <option value="FMIPA">FMIPA</option>
+                                        <option value="Fakultas Ekonomi dan Bisnis">Fakultas Ekonomi dan Bisnis</option>
+                                        <option value="Fakultas Dakwah dan Komunikasi">Fakultas Dakwah dan Komunikasi</option>
+                                        <option value="Administrasi Niaga">Administrasi Niaga</option>
+                                        <option value="Fakultas Sains dan Teknologi">Fakultas Sains dan Teknologi</option>
+                                        <option value="ilmu komputer">ilmu komputer</option>
+                                        <option value="Perkebunan">Perkebunan</option>
+                                        <option value="Fakultas Pertanian">Fakultas Pertanian</option>
+                                        <option value="Fakultas Ekonomi dan Ilmu Sosial">Fakultas Ekonomi dan Ilmu Sosial</option>
+                                        <option value="Matematika dan Ilmu Pengetahuan Alam">Matematika dan Ilmu Pengetahuan Alam</option>
+                                        <option value="Fakultas Matematika dan Ilmu Pengetahuan Alam">Fakultas Matematika dan Ilmu Pengetahuan Alam</option>
+                                        <option value="Fakultas Vokasi">Fakultas Vokasi</option>
+                                        <option value="PERTANIAN">PERTANIAN</option>
+                                        <option value="Fakultas Ekonomi dan bisnis islam">Fakultas Ekonomi dan bisnis islam</option>
+                                        <option value="Fakultas Ilmu Sosial dan Politik">Fakultas Ilmu Sosial dan Politik</option>
+                                        <option value="Falkultas Pertanian Dan Perternakan">Falkultas Pertanian Dan Perternakan</option>
+                                        <option value="Fakultas Ekonomi dan Manajemen">Fakultas Ekonomi dan Manajemen</option>
+                                        <option value="Fakultas Hukum">Fakultas Hukum</option>
+                                        <option value="Fakultas Ilmu Komunikasi">Fakultas Ilmu Komunikasi</option>
+                                        <option value="-">-</option>
+                                        <option value="Hukum">Hukum</option>
+                                        <option value="Vokasi">Vokasi</option>
+                                        <option value="Fakultas Bisnis">Fakultas Bisnis</option>
+                                        <option value="Ekonomi dan Bisnis">Ekonomi dan Bisnis</option>
+                                        <option value="Dakwah dan Komunikasi">Dakwah dan Komunikasi</option>
+                                        <option value="Fakultas Teknologi Industri">Fakultas Teknologi Industri</option>
+                                        <option value="Informatika">Informatika</option>
+                                        <option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
+                                        <option value="Teknologi Pertanian">Teknologi Pertanian</option>
+                                        <option value="Kesehatan">Kesehatan</option>
+                                        <option value="Fakultas Ekonomi">Fakultas Ekonomi</option>
+                                        <option value="Teknik Kimia">Teknik Kimia</option>
+                                        <option value="Fakultas Ilmu Kesehatan">Fakultas Ilmu Kesehatan</option>
+                                        <option value="Fakultas teknik">Fakultas teknik</option>
+                                        <option value="Fakultas Ilmu Komputer">Fakultas Ilmu Komputer</option>
+                                        <option value="AKUNTANSI">AKUNTANSI</option>
+                                        <option value="Fakultas manajemen">Fakultas manajemen</option>
+                                        <option value="Fakultas Ilmu Hayati">Fakultas Ilmu Hayati</option>
+                                        <option value="Fakultas Ilmu Sosial dan Ilmu Politik">Fakultas Ilmu Sosial dan Ilmu Politik</option>
+                                        <option value="Fakultas Ekonomi dan Bisnis Syariah">Fakultas Ekonomi dan Bisnis Syariah</option>
+                                        <option value="Kehutanan dan Lingkungan">Kehutanan dan Lingkungan</option>
+                                        <option value="Bisnis">Bisnis</option>
+                                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                                        <option value="Ilmu Kesehatan">Ilmu Kesehatan</option>
+                                        <option value="Budidaya Tanaman Perkebunan">Budidaya Tanaman Perkebunan</option>
+                                        <option value="Fakultas Teknologi Pertanian">Fakultas Teknologi Pertanian</option>
+                                        <option value="Fakultas Komunikasi dan Bisnis">Fakultas Komunikasi dan Bisnis</option>
+                                        <option value="Fakultas Teknik Sipil dan perencanaan">Fakultas Teknik Sipil dan perencanaan</option>
+                                        <option value="Sekolah Bisnis">Sekolah Bisnis</option>
+                                        <option value="Sekolah Vokasi">Sekolah Vokasi</option>
+                                        <option value="Fakultas Hukum Ilmu Sosial dan Humaniora">Fakultas Hukum Ilmu Sosial dan Humaniora</option>
+                                        <option value="Teknik Informatika">Teknik Informatika</option>
+                                        <option value="Sains Dan Teknologi">Sains Dan Teknologi</option>
+                                        <option value="Politeknik">Politeknik</option>
+                                        <option value="KEHUTANAN">KEHUTANAN</option>
+                                        <option value="Test">Test</option>
+                                        <option value="Psikologi">Psikologi</option>
+                                        <option value="Fakultas Ekonomi dan Bisnis (FEB)">Fakultas Ekonomi dan Bisnis (FEB)</option>
+                                        <option value="Vokasi ( Diploma IV )">Vokasi ( Diploma IV )</option>
+                                        <option value="Rekayasa Industri">Rekayasa Industri</option>
+                                        <option value="Engineering Faculty">Engineering Faculty</option>
+                                        <option value="Manajemen Informatika">Manajemen Informatika</option>
+                                        <option value="Ilmu Hukum">Ilmu Hukum</option>
+                                        <option value="Teknik informatik">Teknik informatik</option>
+                                        <option value="Fakultas Teknologi dan Industri">Fakultas Teknologi dan Industri</option>
+                                        <option value="Ilmu Psikologi">Ilmu Psikologi</option>
+                                      </datalist>
+                  <template x-if="errors.fakultas">
+                    <div class="invalid-feedback" x-text="errors.fakultas"></div>
+                  </template>
+                </div>
+              </template>
+              <div class="mb-3">
+                <label for="jurusan" class="form-label"><span class="text-danger">*</span> Jurusan</label>
+                <input list="jurusan_list" type="text" x-model="form.jurusan" name="jurusan" class="form-control" :class="{'is-invalid': errors.jurusan}" id="jurusan" placeholder="Masukkan jurusan anda" autocomplete="off">
+                <datalist id="jurusan_list">
+                                        <option value="Teknik industri">Teknik industri</option>
+                                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                                        <option value="perawatan mesin pengolah hasil perkebunan">perawatan mesin pengolah hasil perkebunan</option>
+                                        <option value="Kimia">Kimia</option>
+                                        <option value="Manajemen">Manajemen</option>
+                                        <option value="Agribisnis Tanaman Perkebunan (Sawit)">Agribisnis Tanaman Perkebunan (Sawit)</option>
+                                        <option value="TKJ">TKJ</option>
+                                        <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                                        <option value="Ilmu komunikasi">Ilmu komunikasi</option>
+                                        <option value="Teknik kimia">Teknik kimia</option>
+                                        <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
+                                        <option value="Mekatronika">Mekatronika</option>
+                                        <option value="Otomatisasi tata kelola perkantoran">Otomatisasi tata kelola perkantoran</option>
+                                        <option value="Administrasi Niaga">Administrasi Niaga</option>
+                                        <option value="Teknik Informatika">Teknik Informatika</option>
+                                        <option value="Pengelolaan Perkebunan">Pengelolaan Perkebunan</option>
+                                        <option value="Agribinis">Agribinis</option>
+                                        <option value="Manajemen SDM">Manajemen SDM</option>
+                                        <option value="D4 Teknologi Rekayasa Mesin Industri Perkebunan">D4 Teknologi Rekayasa Mesin Industri Perkebunan</option>
+                                        <option value="AGROTEKNOLOGI">AGROTEKNOLOGI</option>
+                                        <option value="Atp(agribisnis tanaman perkebunan)">Atp(agribisnis tanaman perkebunan)</option>
+                                        <option value="Matematika">Matematika</option>
+                                        <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                        <option value="kimia analis">kimia analis</option>
+                                        <option value="Teknologi Komputer">Teknologi Komputer</option>
+                                        <option value="Manajemen Bisnis Syariah">Manajemen Bisnis Syariah</option>
+                                        <option value="Teknik MEKANIK INDUSTRI">Teknik MEKANIK INDUSTRI</option>
+                                        <option value="Hubungan Internasional">Hubungan Internasional</option>
+                                        <option value="Ekonomi Sumberdaya Lingkungan">Ekonomi Sumberdaya Lingkungan</option>
+                                        <option value="Desain Permodelan dan Informasi Bangunan">Desain Permodelan dan Informasi Bangunan</option>
+                                        <option value="Teknik Elektronika">Teknik Elektronika</option>
+                                        <option value="Akuntansi">Akuntansi</option>
+                                        <option value="Teknik komputer jaringan">Teknik komputer jaringan</option>
+                                        <option value="Manajemen Bisnis Telekomunikasi dan Informatika">Manajemen Bisnis Telekomunikasi dan Informatika</option>
+                                        <option value="Teknologi Rekayasa Mesin Industri Perkebunan">Teknologi Rekayasa Mesin Industri Perkebunan</option>
+                                        <option value="Ekonomi">Ekonomi</option>
+                                        <option value="Ilmu Hukum">Ilmu Hukum</option>
+                                        <option value="S1 Akuntansi">S1 Akuntansi</option>
+                                        <option value="Teknik Energi Terbarukan">Teknik Energi Terbarukan</option>
+                                        <option value="TET (teknik energi terbarukan)">TET (teknik energi terbarukan)</option>
+                                        <option value="Perbankan">Perbankan</option>
+                                        <option value="Hubungan Masyarakat">Hubungan Masyarakat</option>
+                                        <option value="Agribisnis tanaman">Agribisnis tanaman</option>
+                                        <option value="ADMINISTRASI PERKANTORAN">ADMINISTRASI PERKANTORAN</option>
+                                        <option value="Kimia analisis">Kimia analisis</option>
+                                        <option value="Perpajakan">Perpajakan</option>
+                                        <option value="Agribisnis">Agribisnis</option>
+                                        <option value="D3 Teknologi Komputer">D3 Teknologi Komputer</option>
+                                        <option value="Bisnis Digital">Bisnis Digital</option>
+                                        <option value="Teknik Pengolahan Sawit">Teknik Pengolahan Sawit</option>
+                                        <option value="Ilmu Administrasi Negara">Ilmu Administrasi Negara</option>
+                                        <option value="D3 Manajemen Perusahaan">D3 Manajemen Perusahaan</option>
+                                        <option value="Teknik Elektro">Teknik Elektro</option>
+                                        <option value="Akutansi">Akutansi</option>
+                                        <option value="S1 Manajemen">S1 Manajemen</option>
+                                        <option value="Ilmu Komputer/Sistem Informasi">Ilmu Komputer/Sistem Informasi</option>
+                                        <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
+                                        <option value="Manajemen Magister (S2)">Manajemen Magister (S2)</option>
+                                        <option value="Bimbingan Konseling Islam">Bimbingan Konseling Islam</option>
+                                        <option value="agribisnis pengolahan hasil pertania">agribisnis pengolahan hasil pertania</option>
+                                        <option value="Teknologi Hasil Pertanian">Teknologi Hasil Pertanian</option>
+                                        <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                                        <option value="Sistem Informasi">Sistem Informasi</option>
+                                        <option value="Kesehatan masyarakat">Kesehatan masyarakat</option>
+                                        <option value="Ilmu Ekonomi">Ilmu Ekonomi</option>
+                                        <option value="Kesehatan Masyarakat (Peminatan K3)">Kesehatan Masyarakat (Peminatan K3)</option>
+                                        <option value="Agroekoteknologi">Agroekoteknologi</option>
+                                        <option value="D3 AKUNTANSI">D3 AKUNTANSI</option>
+                                        <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                        <option value="Ilmu Pertanian">Ilmu Pertanian</option>
+                                        <option value="Biologi">Biologi</option>
+                                        <option value="Teknologi Pertanian">Teknologi Pertanian</option>
+                                        <option value="At">At</option>
+                                        <option value="Kesehatan Masyarakat ( Peminatan K3 )">Kesehatan Masyarakat ( Peminatan K3 )</option>
+                                        <option value="Agribisnis Pengolahan Hasil Pertanian">Agribisnis Pengolahan Hasil Pertanian</option>
+                                        <option value="Teknik kimia industri">Teknik kimia industri</option>
+                                        <option value="Manajemen Bisnis">Manajemen Bisnis</option>
+                                        <option value="(ATP) agribisnis Tanaman perkebunan">(ATP) agribisnis Tanaman perkebunan</option>
+                                        <option value="Teknik Industri Pertanian">Teknik Industri Pertanian</option>
+                                        <option value="Teknik Jaringan Dan Komputer">Teknik Jaringan Dan Komputer</option>
+                                        <option value="MANAJEMEN PERKANTORAN DAN LAYANAN BISNIS">MANAJEMEN PERKANTORAN DAN LAYANAN BISNIS</option>
+                                        <option value="Teknik pengolahan kelapa sawit">Teknik pengolahan kelapa sawit</option>
+                                        <option value="Ilmu administrasi bisnis">Ilmu administrasi bisnis</option>
+                                        <option value="Silvikultur">Silvikultur</option>
+                                        <option value="Manajemen informatika">Manajemen informatika</option>
+                                        <option value="Manajemen Keuangan">Manajemen Keuangan</option>
+                                        <option value="administrasi negara">administrasi negara</option>
+                                        <option value="Teknik Mesin">Teknik Mesin</option>
+                                        <option value="Ilmu Administrasi">Ilmu Administrasi</option>
+                                        <option value="Budidaya Tanaman Perkebunan">Budidaya Tanaman Perkebunan</option>
+                                        <option value="Teknik Pertanian dan Biosistem">Teknik Pertanian dan Biosistem</option>
+                                        <option value="Agribisnis Tanaman Perkebunan">Agribisnis Tanaman Perkebunan</option>
+                                        <option value="Business Administration">Business Administration</option>
+                                        <option value="Bisnis">Bisnis</option>
+                                        <option value="Kimia Industri">Kimia Industri</option>
+                                        <option value="Teknik">Teknik</option>
+                                        <option value="Administrasi Bisnis Terapan">Administrasi Bisnis Terapan</option>
+                                        <option value="TMI">TMI</option>
+                                        <option value="DIII Perpajakan">DIII Perpajakan</option>
+                                        <option value="S1- KEHUTANAN">S1- KEHUTANAN</option>
+                                        <option value="Pengolahan Hasil Perkebunan">Pengolahan Hasil Perkebunan</option>
+                                        <option value="Tes">Tes</option>
+                                        <option value="psi">psi</option>
+                                        <option value="Teknologi hasil pertanin">Teknologi hasil pertanin</option>
+                                        <option value="Statistika">Statistika</option>
+                                        <option value="Magister Manajemen">Magister Manajemen</option>
+                                        <option value="Teknik mesin industri">Teknik mesin industri</option>
+                                        <option value="ilmu pemerintahan">ilmu pemerintahan</option>
+                                        <option value="Teknologi pengolahan Hasil Perkebunan">Teknologi pengolahan Hasil Perkebunan</option>
+                                        <option value="Teknik komputer dan jaringan">Teknik komputer dan jaringan</option>
+                                        <option value="Otomatisasi tata kelola">Otomatisasi tata kelola</option>
+                                        <option value="Human Security Engineering">Human Security Engineering</option>
+                                        <option value="Psikologi">Psikologi</option>
+                                        <option value="Pengolahan Perkebunan Kelapa Sawit">Pengolahan Perkebunan Kelapa Sawit</option>
+                                        <option value="D3 Perpajakan">D3 Perpajakan</option>
+                                        <option value="Pidana">Pidana</option>
+                                        <option value="Ilmu Komunikasi S1">Ilmu Komunikasi S1</option>
+                                        <option value="Ekonomi Pembangunan">Ekonomi Pembangunan</option>
+                                        <option value="Desain Pemodelan dan Informasi Bangunan">Desain Pemodelan dan Informasi Bangunan</option>
+                                        <option value="Statis">Statis</option>
+                                        <option value="Otomatisasi Administrasi Perkantoran">Otomatisasi Administrasi Perkantoran</option>
+                                        <option value="Geografi">Geografi</option>
+                                        <option value="Teknologi industri pertanian">Teknologi industri pertanian</option>
+                                        <option value="Agribisnis Penholahan Hasil Pertanian">Agribisnis Penholahan Hasil Pertanian</option>
+                                        <option value="Agribinis tanaman perkebunan">Agribinis tanaman perkebunan</option>
+                                        <option value="Ilmu Administrasi Bisnus">Ilmu Administrasi Bisnus</option>
+                                        <option value="ATP">ATP</option>
+                                        <option value="ATP (Agribisnis tanaman perkebunan)">ATP (Agribisnis tanaman perkebunan)</option>
+                                        <option value="Ilmu Administrasi Publik">Ilmu Administrasi Publik</option>
+                                  </datalist>
+                <template x-if="errors.jurusan">
+                  <div class="invalid-feedback" x-text="errors.jurusan"></div>
+                </template>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"><span class="text-danger">*</span> Email</label>
+                <input type="text" x-model="form.email" name="email" class="form-control" :class="{'is-invalid': errors.email}" id="email" placeholder="Masukkan email anda">
+                <template x-if="errors.email">
+                  <div class="invalid-feedback" x-text="errors.email"></div>
+                </template>
+              </div>
+              <div class="mb-3">
+                <label for="email_lembaga" class="form-label">Email Kampus/Sekolah</label>
+                <input type="text" x-model="form.email_lembaga" name="email_lembaga" class="form-control" :class="{'is-invalid': errors.email_lembaga}" id="email_lembaga" placeholder="Masukkan email kampus anda">
+                <template x-if="errors.email_lembaga">
+                  <div class="invalid-feedback" x-text="errors.email_lembaga"></div>
+                </template>
+              </div>
+              <div class="mb-3">
+                <label for="nomor_hp" class="form-label"><span class="text-danger">*</span> No HP (contoh format: 628xxxxxx)</label>
+                <input type="text" x-model="form.nomor_hp" name="nomor_hp" class="form-control" :class="{'is-invalid': errors.nomor_hp}" id="nomor_hp" placeholder="Masukkan nomor hp anda">
+                <template x-if="errors.nomor_hp">
+                  <div class="invalid-feedback" x-text="errors.nomor_hp"></div>
+                </template>
+              </div>
+              <div class="mb-3">
+                <label for="media_sosial" class="form-label"><span class="text-danger">*</span> Media Sosial Instagram</label>
+                <input type="text" name="media_sosial" x-model="form.media_sosial" class="form-control" :class="{'is-invalid': errors.media_sosial}" id="media_sosial" placeholder="Media Sosial Instagram">
+                <template x-if="errors.media_sosial">
+                  <div class="invalid-feedback" x-text="errors.media_sosial"></div>
+                </template>
+              </div>
+              
+                                    <div class="mb-3">
+              <label for="area" class="form-label"><span class="text-danger">*</span> Pilih Tempat Penelitian</label>
+              <select @change="renderSubArea" x-model="form.kode_area" class="form-select" :class="{'is-invalid': errors.kode_area}" id="area" name="area" aria-label="Default select example">
+                  <option value="">Pilih Penempatan</option>
+                                        <option value="EH1A">Kantor Direksi</option>
+                                        <option value="EK1A">Kebun</option>
+                                        <option value="EP1A">Pabrik</option>
+                                </select>
+              <template x-if="errors.kode_area">
+                <div class="invalid-feedback" x-text="errors.kode_area"></div>
+              </template>
+            </div>
+            <template x-if="form.kode_area">
+              <div class="mb-3">
+                <label for="kode_subarea" class="form-label"><span class="text-danger">*</span> Sub Area/Bagian Yang Dituju</label>
+                <select class="form-select" :class="{'is-invalid': errors.kode_subarea}" x-model="form.kode_subarea" id="kode_subarea" name="kode_subarea" aria-label="Default select example">
+                    <option value="">Pilih Sub Area/Bagian</option>
+                    <template x-for="(subarea, index) in subareas" :key="index">
+                      <option :value="subarea.kode_subarea" x-text="subarea.nama_subarea"></option>
+                    </template>
+                </select>
+                <template x-if="errors.kode_subarea">
+                  <div class="invalid-feedback" x-text="errors.kode_subarea"></div>
+                </template>
+              </div>
+            </template> 
+                                  </div>
+          <div class="col-lg-6 col-sm-12">
+                                                                                        <div class="mb-3">
+                    <label for="periode_penelitian" class="form-label"><span class="text-danger">*</span>Periode Penelitian</label>
+                    <input placeholder="Masukkan Periode" type="date" class="form-control periode" x-model="form.periode_penelitian" :class="{'is-invalid': errors.periode_penelitian}" name="" id="">
+                    <template x-if="errors.periode_penelitian">
+                      <div class="invalid-feedback" x-text="errors.periode_penelitian"></div>
+                    </template>
+                  </div> 
+                  <div class="mb-3">
+                    <label for="judul_penelitian" class="form-label"><span class="text-danger">*</span> Judul Penelitian</label>
+                    <input type="text" name="judul_penelitian" x-model="form.judul_penelitian" class="form-control" :class="{'is-invalid': errors.judul_penelitian}" id="judul_penelitian" placeholder="Masukkan Judul Penelitian">
+                    <template x-if="errors.judul_penelitian">
+                      <div class="invalid-feedback" x-text="errors.judul_penelitian"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="data_yang_diminta" class="form-label"><span class="text-danger">*</span> Data Yang Diminta</label>
+                    <input type="text" name="data_yang_diminta" x-model="form.data_yang_diminta" class="form-control" :class="{'is-invalid': errors.data_yang_diminta}" id="data_yang_diminta" placeholder="Masukkan Data Yang Diminta">
+                    <template x-if="errors.data_yang_diminta">
+                      <div class="invalid-feedback" x-text="errors.data_yang_diminta"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="file_surat_pengajuan" class="form-label"><span class="text-danger">*</span> Surat Pengantar Dari Sekolah/Kampus (file: pdf)</label>
+                    <input @change="form.file_surat_pengajuan = event.target.files[0]" class="form-control" accept="application/pdf" :class="{'is-invalid': errors.file_surat_pengajuan}" name="file_surat_pengajuan" type="file" id="file_surat_pengajuan">
+                    <template x-if="errors.file_surat_pengajuan">
+                      <div class="invalid-feedback" x-text="errors.file_surat_pengajuan"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="jabatan_penandatangan_surat" class="form-label"><span class="text-danger">*</span> Jabatan Penandatangan Surat Pengantar Penelitian</label>
+                    <input type="text" x-model="form.jabatan_penandatanganan_surat" placeholder="Masukkan Jabatan Penandatangan Surat Pengantar Penelitian" class="form-control" :class="{'is-invalid': errors.jabatan_penandatanganan_surat}">
+                    <template x-if="errors.jabatan_penandatanganan_surat">
+                      <div class="invalid-feedback" x-text="errors.jabatan_penandatanganan_surat"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="tanggal_surat" class="form-label"><span class="text-danger">*</span> Tanggal Surat</label>
+                    <input type="date" id="tanggal_surat" class="form-control" x-model="form.tanggal_surat" :class="{'is-invalid': errors.tanggal_surat}">
+                    <template x-if="errors.tanggal_surat">
+                      <div class="invalid-feedback" x-text="errors.tanggal_surat"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nomor_surat" class="form-label"><span class="text-danger">*</span> Nomor Surat</label>
+                    <input type="text" class="form-control" id="nomor_surat" x-model="form.nomor_surat" :class="{'is-invalid': errors.nomor_surat}" placeholder="Masukkan nomor surat pengajuan anda">
+                    <template x-if="errors.nomor_surat">
+                      <div class="invalid-feedback" x-text="errors.nomor_surat"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="proposal_laporan" class="form-label"><span class="text-danger">*</span> Proposal Laporan (file: pdf)</label>
+                    <input @change="form.proposal_laporan = event.target.files[0]" accept="application/pdf" class="form-control" :class="{'is-invalid': errors.proposal_laporan}" name="proposal_laporan" type="file" id="proposal_laporan">
+                    <template x-if="errors.proposal_laporan">
+                      <div class="invalid-feedback" x-text="errors.proposal_laporan"></div>
+                    </template>
+                  </div>
+                                    <div class="mb-3">
+                    <label for="file_foto" class="form-label"><span class="text-danger">*</span> PAS Foto 3x4 (file: jpg, jpeg, png)</label>
+                    <input @change="form.file_foto = event.target.files[0]" class="form-control" accept="image/*" :class="{'is-invalid': errors.file_foto}" name="file_foto" type="file" id="file_foto">
+                    <template x-if="errors.file_foto">
+                      <div class="invalid-feedback" x-text="errors.file_foto"></div>
+                    </template>
+                  </div>
+                  <div class="mb-3">
+                    <label for="is_follow_ptpn" class="form-label"><span class="text-danger">*</span> Sudah Memfollow Ig PTPN IV REGIONAL III (@ptpnusalima)</label>
+                    <select name="" id="is_follow_ptpn" class="form-select" :class="{'is-invalid': errors.is_follow_ptpn}" x-model="form.is_follow_ptpn">
+                      <option value="">Pilih Jawaban</option>
+                      <option value="1">Sudah</option>
+                      <option value="0">Belum</option>
+                    </select>
+                    <template x-if="errors.is_follow_ptpn">
+                      <div class="invalid-feedback" x-text="errors.is_follow_ptpn"></div>
+                    </template>
+                  </div>
+                  <template x-if="parseInt(form?.is_follow_ptpn)">
+                    <div class="mb-3">
+                      <label for="bukti_follow_ptpn" class="form-label"><span class="text-danger">*</span> Bukti Screenshoot Follow Ig PTPN IV REGIONAL III (file: jpg, jpeg, png)</label>
+                      <input class="form-control" :class="{'is-invalid': errors.bukti_follow_ptpn}" accept="image/*" @change="form.bukti_follow_ptpn = event.target.files[0]" name="bukti_follow_ptpn" type="file" id="bukti_follow_ptpn">
+                      <template x-if="errors.bukti_follow_ptpn">
+                        <div class="invalid-feedback" x-text="errors.bukti_follow_ptpn"></div>
+                      </template>
+                    </div>
+                  </template>
+                                            </div>
+      </div>
+      <div class="d-grid gap-2 mt-3 mb-5">
+        <template x-if="!isLoading">
+          <button class="btn btn-lg btn-info" type="submit">Simpan Data</button>
+        </template>
+        <template x-if="isLoading">
+          <button class="btn btn-lg btn-info" type="button" disabled="">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </template>
+      </div>
+    </form>
+    
+
+  </div>
+</div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- Bootstrap core JS-->
+ <script src="../../../cdn.jsdelivr.net/npm/bootstrap%405.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Core theme JS-->
+ <script src="../guest/js/scripts.js"></script>
+ <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+ <!-- * *                               SB Forms JS                               * *-->
+ <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+ <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+ <script src="../../../cdn.startbootstrap.com/sb-forms-0.4.1.js"></script>
+ 
+ <script src="../../../npmcdn.com/flatpickr%404.6.13/dist/flatpickr.min.js"></script>
+<script src="../../../npmcdn.com/flatpickr%404.6.13/dist/l10n/id.js"></script>
+     <script>
+      
+  const myInput = document.querySelector(".periode");
+  console.log(myInput);
+  const fp = flatpickr(myInput, {
+    altInput: true,
+    altFormat: "d F Y",
+    dateFormat: "Y-m-d",
+    minDate: new Date().fp_incr(14),
+    mode: "range",
+    "locale": "id"
+  });  // flatpickr
+    </script>
+<script type="text/javascript">
+var phpdebugbar = new PhpDebugBar.DebugBar();
+phpdebugbar.addIndicator("php_version", new PhpDebugBar.DebugBar.Indicator({"icon":"code","tooltip":"PHP Version"}), "right");
+phpdebugbar.addTab("messages", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Messages", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+phpdebugbar.addIndicator("time", new PhpDebugBar.DebugBar.Indicator({"icon":"clock-o","tooltip":"Request Duration"}), "right");
+phpdebugbar.addTab("timeline", new PhpDebugBar.DebugBar.Tab({"icon":"tasks","title":"Timeline", "widget": new PhpDebugBar.Widgets.TimelineWidget()}));
+phpdebugbar.addIndicator("memory", new PhpDebugBar.DebugBar.Indicator({"icon":"cogs","tooltip":"Memory Usage"}), "right");
+phpdebugbar.addTab("exceptions", new PhpDebugBar.DebugBar.Tab({"icon":"bug","title":"Exceptions", "widget": new PhpDebugBar.Widgets.ExceptionsWidget()}));
+phpdebugbar.addTab("views", new PhpDebugBar.DebugBar.Tab({"icon":"leaf","title":"Views", "widget": new PhpDebugBar.Widgets.TemplatesWidget()}));
+phpdebugbar.addTab("route", new PhpDebugBar.DebugBar.Tab({"icon":"share","title":"Route", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+phpdebugbar.addIndicator("currentroute", new PhpDebugBar.DebugBar.Indicator({"icon":"share","tooltip":"Route"}), "right");
+phpdebugbar.addTab("queries", new PhpDebugBar.DebugBar.Tab({"icon":"database","title":"Queries", "widget": new PhpDebugBar.Widgets.SQLQueriesWidget()}));
+phpdebugbar.addTab("models", new PhpDebugBar.DebugBar.Tab({"icon":"cubes","title":"Models", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+phpdebugbar.addTab("emails", new PhpDebugBar.DebugBar.Tab({"icon":"inbox","title":"Mails", "widget": new PhpDebugBar.Widgets.MailsWidget()}));
+phpdebugbar.addTab("gate", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Gate", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+phpdebugbar.addTab("session", new PhpDebugBar.DebugBar.Tab({"icon":"archive","title":"Session", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+phpdebugbar.addTab("request", new PhpDebugBar.DebugBar.Tab({"icon":"tags","title":"Request", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+phpdebugbar.setDataMap({
+"php_version": ["php.version", ],
+"messages": ["messages.messages", []],
+"messages:badge": ["messages.count", null],
+"time": ["time.duration_str", '0ms'],
+"timeline": ["time", {}],
+"memory": ["memory.peak_usage_str", '0B'],
+"exceptions": ["exceptions.exceptions", []],
+"exceptions:badge": ["exceptions.count", null],
+"views": ["views", []],
+"views:badge": ["views.nb_templates", 0],
+"route": ["route", {}],
+"currentroute": ["route.uri", ],
+"queries": ["queries", []],
+"queries:badge": ["queries.nb_statements", 0],
+"models": ["models.data", {}],
+"models:badge": ["models.count", 0],
+"emails": ["symfonymailer_mails.mails", []],
+"emails:badge": ["symfonymailer_mails.count", null],
+"gate": ["gate.messages", []],
+"gate:badge": ["gate.count", null],
+"session": ["session", {}],
+"request": ["request", {}]
+});
+phpdebugbar.restoreState();
+phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(phpdebugbar, undefined, true);
+phpdebugbar.ajaxHandler.bindToFetch();
+phpdebugbar.ajaxHandler.bindToXHR();
+phpdebugbar.setOpenHandler(new PhpDebugBar.OpenHandler({"url":"http:\/\/118.97.163.52:8182\/magang\/_debugbar\/open"}));
+phpdebugbar.addDataSet({"__meta":{"id":"X890a0b385758d6f1729dcefb3fb69563","datetime":"2024-11-19 00:18:01","utime":1731950281.245869,"method":"GET","uri":"\/magang\/pengajuan\/pengajuan-penelitian","ip":"182.1.5.142"},"php":{"version":"8.1.0","interface":"cgi-fcgi"},"messages":{"count":0,"messages":[]},"time":{"start":1731950280.838949,"end":1731950281.245899,"duration":0.4069499969482422,"duration_str":"407ms","measures":[{"label":"Booting","start":1731950280.838949,"relative_start":0,"end":1731950281.10004,"relative_end":1731950281.10004,"duration":0.2610909938812256,"duration_str":"261ms","memory":0,"memory_str":"0B","params":[],"collector":"time"},{"label":"Application","start":1731950281.100061,"relative_start":0.2611119747161865,"end":1731950281.245902,"relative_end":3.0994415283203125e-6,"duration":0.14584112167358398,"duration_str":"146ms","memory":0,"memory_str":"0B","params":[],"collector":"time"}]},"memory":{"peak_usage":23467240,"peak_usage_str":"22MB"},"exceptions":{"count":0,"exceptions":[]},"views":{"nb_templates":3,"templates":[{"name":"1x guest.pengajuan.show","param_count":null,"params":[],"start":1731950281.219914,"type":"blade","hash":"bladeC:\\xampp\\htdocs\\magang\\resources\\views\/guest\/pengajuan\/show.blade.phpguest.pengajuan.show","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fresources%2Fviews%2Fguest%2Fpengajuan%2Fshow.blade.php&line=1","ajax":false,"filename":"show.blade.php","line":""},"render_count":1,"name_original":"guest.pengajuan.show"},{"name":"1x layout.landing-page-layout.main","param_count":null,"params":[],"start":1731950281.228134,"type":"blade","hash":"bladeC:\\xampp\\htdocs\\magang\\resources\\views\/layout\/landing-page-layout\/main.blade.phplayout.landing-page-layout.main","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fresources%2Fviews%2Flayout%2Flanding-page-layout%2Fmain.blade.php&line=1","ajax":false,"filename":"main.blade.php","line":""},"render_count":1,"name_original":"layout.landing-page-layout.main"},{"name":"1x layout.landing-page-layout.navbar","param_count":null,"params":[],"start":1731950281.228737,"type":"blade","hash":"bladeC:\\xampp\\htdocs\\magang\\resources\\views\/layout\/landing-page-layout\/navbar.blade.phplayout.landing-page-layout.navbar","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fresources%2Fviews%2Flayout%2Flanding-page-layout%2Fnavbar.blade.php&line=1","ajax":false,"filename":"navbar.blade.php","line":""},"render_count":1,"name_original":"layout.landing-page-layout.navbar"}]},"route":{"uri":"GET pengajuan\/{pengajuan}","middleware":"web, guest","as":"pengajuan.show","controller":"App\\Http\\Controllers\\PengajuanController@show","namespace":null,"prefix":"","where":[],"file":"<a href=\"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=51\" onclick=\"\">app\/Http\/Controllers\/PengajuanController.php:51-69<\/a>"},"queries":{"nb_statements":7,"nb_failed_statements":0,"accumulated_duration":0.013030000000000002,"accumulated_duration_str":"13.03ms","memory_usage":0,"memory_usage_str":null,"statements":[{"sql":"Connection Established","type":"transaction","params":[],"bindings":[],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":53},{"index":16,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":17,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":18,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":205}],"start":1731950281.15848,"duration":0,"duration_str":"","memory":0,"memory_str":null,"filename":"PengajuanController.php:53","source":"app\/Http\/Controllers\/PengajuanController.php:53","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=53","ajax":false,"filename":"PengajuanController.php","line":"53"},"connection":"magang","start_percent":0,"width_percent":0},{"sql":"select distinct `nama_lembaga_pendidikan` from `pengajuan` where `nama_lembaga_pendidikan` is not null","type":"query","params":[],"bindings":[],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":53},{"index":16,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":17,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":18,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":205}],"start":1731950281.167747,"duration":0.00532,"duration_str":"5.32ms","memory":0,"memory_str":null,"filename":"PengajuanController.php:53","source":"app\/Http\/Controllers\/PengajuanController.php:53","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=53","ajax":false,"filename":"PengajuanController.php","line":"53"},"connection":"magang","start_percent":0,"width_percent":40.829},{"sql":"select distinct `fakultas` from `pengajuan` where `fakultas` is not null","type":"query","params":[],"bindings":[],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":54},{"index":16,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":17,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":18,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":205}],"start":1731950281.178428,"duration":0.00266,"duration_str":"2.66ms","memory":0,"memory_str":null,"filename":"PengajuanController.php:54","source":"app\/Http\/Controllers\/PengajuanController.php:54","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=54","ajax":false,"filename":"PengajuanController.php","line":"54"},"connection":"magang","start_percent":40.829,"width_percent":20.414},{"sql":"select distinct `jurusan` from `pengajuan` where `jurusan` is not null","type":"query","params":[],"bindings":[],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":55},{"index":16,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":17,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":18,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":205}],"start":1731950281.1844828,"duration":0.0028599999999999997,"duration_str":"2.86ms","memory":0,"memory_str":null,"filename":"PengajuanController.php:55","source":"app\/Http\/Controllers\/PengajuanController.php:55","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=55","ajax":false,"filename":"PengajuanController.php","line":"55"},"connection":"magang","start_percent":61.243,"width_percent":21.949},{"sql":"select * from `jenis_pengajuan` where `slug` = 'pengajuan-penelitian' limit 1","type":"query","params":[],"bindings":["pengajuan-penelitian"],"hints":null,"show_copy":false,"backtrace":[{"index":17,"namespace":null,"name":"app\/Repositories\/JenisPengajuan\/JenisPengajuanRepositoryImplement.php","file":"C:\\xampp\\htdocs\\magang\\app\\Repositories\\JenisPengajuan\\JenisPengajuanRepositoryImplement.php","line":56},{"index":18,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":56},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":20,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":21,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260}],"start":1731950281.191579,"duration":0.0005200000000000001,"duration_str":"520\u03bcs","memory":0,"memory_str":null,"filename":"JenisPengajuanRepositoryImplement.php:56","source":"app\/Repositories\/JenisPengajuan\/JenisPengajuanRepositoryImplement.php:56","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FJenisPengajuan%2FJenisPengajuanRepositoryImplement.php&line=56","ajax":false,"filename":"JenisPengajuanRepositoryImplement.php","line":"56"},"connection":"magang","start_percent":83.193,"width_percent":3.991},{"sql":"select * from `personnel_area`","type":"query","params":[],"bindings":[],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php","file":"C:\\xampp\\htdocs\\magang\\app\\Repositories\\PersonnelArea\\PersonnelAreaRepositoryImplement.php","line":32},{"index":16,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":58},{"index":17,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":18,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260}],"start":1731950281.196973,"duration":0.00045,"duration_str":"450\u03bcs","memory":0,"memory_str":null,"filename":"PersonnelAreaRepositoryImplement.php:32","source":"app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php:32","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FPersonnelArea%2FPersonnelAreaRepositoryImplement.php&line=32","ajax":false,"filename":"PersonnelAreaRepositoryImplement.php","line":"32"},"connection":"magang","start_percent":87.183,"width_percent":3.454},{"sql":"select * from `sub_area` where `sub_area`.`kode_area` in ('EH1A', 'EK1A', 'EP1A')","type":"query","params":[],"bindings":["EH1A","EK1A","EP1A"],"hints":null,"show_copy":false,"backtrace":[{"index":20,"namespace":null,"name":"app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php","file":"C:\\xampp\\htdocs\\magang\\app\\Repositories\\PersonnelArea\\PersonnelAreaRepositoryImplement.php","line":32},{"index":21,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":58},{"index":22,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":23,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":24,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260}],"start":1731950281.202998,"duration":0.00079,"duration_str":"790\u03bcs","memory":0,"memory_str":null,"filename":"PersonnelAreaRepositoryImplement.php:32","source":"app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php:32","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FPersonnelArea%2FPersonnelAreaRepositoryImplement.php&line=32","ajax":false,"filename":"PersonnelAreaRepositoryImplement.php","line":"32"},"connection":"magang","start_percent":90.637,"width_percent":6.063},{"sql":"select * from `jenjang_pendidikan` where `is_aktif` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"app\/Repositories\/JenjangPendidikan\/JenjangPendidikanRepositoryImplement.php","file":"C:\\xampp\\htdocs\\magang\\app\\Repositories\\JenjangPendidikan\\JenjangPendidikanRepositoryImplement.php","line":32},{"index":16,"namespace":null,"name":"app\/Http\/Controllers\/PengajuanController.php","file":"C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php","line":59},{"index":17,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php","line":54},{"index":18,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php","line":43},{"index":19,"namespace":null,"name":"vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php","file":"C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php","line":260}],"start":1731950281.2071369,"duration":0.00043,"duration_str":"430\u03bcs","memory":0,"memory_str":null,"filename":"JenjangPendidikanRepositoryImplement.php:32","source":"app\/Repositories\/JenjangPendidikan\/JenjangPendidikanRepositoryImplement.php:32","xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FJenjangPendidikan%2FJenjangPendidikanRepositoryImplement.php&line=32","ajax":false,"filename":"JenjangPendidikanRepositoryImplement.php","line":"32"},"connection":"magang","start_percent":96.7,"width_percent":3.3}]},"models":{"data":{"App\\Models\\Pengajuan":{"value":312,"xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FPengajuan.php&line=1","ajax":false,"filename":"Pengajuan.php","line":""}},"App\\Models\\SubArea":{"value":50,"xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FSubArea.php&line=1","ajax":false,"filename":"SubArea.php","line":""}},"App\\Models\\PersonnelArea":{"value":3,"xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FPersonnelArea.php&line=1","ajax":false,"filename":"PersonnelArea.php","line":""}},"App\\Models\\JenjangPendidikan":{"value":2,"xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FJenjangPendidikan.php&line=1","ajax":false,"filename":"JenjangPendidikan.php","line":""}},"App\\Models\\JenisPengajuan":{"value":1,"xdebug_link":{"url":"phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FJenisPengajuan.php&line=1","ajax":false,"filename":"JenisPengajuan.php","line":""}}},"count":368,"is_counter":true},"symfonymailer_mails":{"count":0,"mails":[]},"gate":{"count":0,"messages":[]},"session":{"_token":"NEr4elhnWx80EkKCrWn58WkQ5XsqFJRXbLfQU03r","_previous":"array:1 [\n  \"url\" => \"http:\/\/118.97.163.52:8182\/magang\/pengajuan\/pengajuan-penelitian\"\n]","_flash":"array:2 [\n  \"old\" => []\n  \"new\" => []\n]","PHPDEBUGBAR_STACK_DATA":"[]"},"request":{"path_info":"\/pengajuan\/pengajuan-penelitian","status_code":"<pre class=sf-dump id=sf-dump-1252474740 data-indent-pad=\"  \"><span class=sf-dump-num>200<\/span>\n<\/pre><script>Sfdump(\"sf-dump-1252474740\", {\"maxDepth\":0})<\/script>\n","status_text":"OK","format":"html","content_type":"text\/html; charset=UTF-8","request_query":"<pre class=sf-dump id=sf-dump-1089566818 data-indent-pad=\"  \">[]\n<\/pre><script>Sfdump(\"sf-dump-1089566818\", {\"maxDepth\":0})<\/script>\n","request_request":"<pre class=sf-dump id=sf-dump-587274097 data-indent-pad=\"  \">[]\n<\/pre><script>Sfdump(\"sf-dump-587274097\", {\"maxDepth\":0})<\/script>\n","request_headers":"<pre class=sf-dump id=sf-dump-999911097 data-indent-pad=\"  \"><span class=sf-dump-note>array:8<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>referer<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"42 characters\">http:\/\/118.97.163.52:8182\/magang\/pengajuan<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>cookie<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"766 characters\">$Version=1; XSRF-TOKEN=eyJpdiI6ImwxekRPRHl1bllSVW9xWU0vTWFnNmc9PSIsInZhbHVlIjoicDVXTU1tcnBRN2x6d21oQTk1TjBGWjVaWnlrOUlkWG5PV1VnaHNSUkw2WG5sTlp5N3ZtZUMwM1hSb250dlhwRzhOVGl6eDExcU9ZOW1tN3ZzWjdGeUNoQWkwd0c2NW1TbFk4Qy8wL2lLcFdjS3JYdzdveE00Ym15aEs1Z2pHa3IiLCJtYWMiOiJiOWM1MzJhMGFmMjMyNWE4ODY3YWMyNTFkZTBhYzg2ZDcxODZlOTgzMzY5ZGJlNzQ3OTIzNTBmODBmNmE0MWI0IiwidGFnIjoiIn0%3D; $Path=\/; laravel_session=eyJpdiI6Im1oZTB0UXFoMkxhelFnVGNIbDczVWc9PSIsInZhbHVlIjoiQkNnSEdWcTZsVWxYNXB4QU4xKzFLUngzVTZreTlQNUgyZzAzZ1hWWCtCMTNhYzBhcUZtb2JOcHlHeHdnTHNDenQvU21QaWlud3BzUHl4Z0s2K1NWVVNrNkx6U1AwMXJuM3JOSENnT2RBV2FQMjZIYlZaRFN4citUTTdxSXFnUzYiLCJtYWMiOiI3YWZhNzg0NDNmZDIzYTQzNjM2OGEyZDllMWNiZjk1MDYwNjcyZGFiMTU2Y2IzM2FjMDU4Y2FiYjMwNDdjMWI3IiwidGFnIjoiIn0%3D; $Path=\/; samesite=lax; $Path=\/<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>connection<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"10 characters\">keep-alive<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>host<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"18 characters\">118.97.163.52:8182<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>user-agent<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"50 characters\">Mozilla\/4.5 (compatible; HTTrack 3.0x; Windows 98)<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"98 characters\">text\/html,image\/png,image\/jpeg,image\/pjpeg,image\/x-xbitmap,image\/svg+xml,image\/gif;q=0.9,*\/*;q=0.1<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept-language<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"5 characters\">en, *<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept-encoding<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"20 characters\">gzip, identity;q=0.9<\/span>\"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-999911097\", {\"maxDepth\":0})<\/script>\n","request_cookies":"<pre class=sf-dump id=sf-dump-1398853839 data-indent-pad=\"  \"><span class=sf-dump-note>array:5<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>$Version<\/span>\" => <span class=sf-dump-const>null<\/span>\n  \"<span class=sf-dump-key>XSRF-TOKEN<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">NEr4elhnWx80EkKCrWn58WkQ5XsqFJRXbLfQU03r<\/span>\"\n  \"<span class=sf-dump-key>$Path<\/span>\" => <span class=sf-dump-const>null<\/span>\n  \"<span class=sf-dump-key>laravel_session<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">xKkS4y8MC5QP57KTpIvy9tNvYqEAgf5DbQ7xZ6wa<\/span>\"\n  \"<span class=sf-dump-key>samesite<\/span>\" => <span class=sf-dump-const>null<\/span>\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1398853839\", {\"maxDepth\":0})<\/script>\n","response_headers":"<pre class=sf-dump id=sf-dump-964043602 data-indent-pad=\"  \"><span class=sf-dump-note>array:5<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>content-type<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"24 characters\">text\/html; charset=UTF-8<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>cache-control<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"17 characters\">no-cache, private<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>date<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"29 characters\">Mon, 18 Nov 2024 17:18:01 GMT<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>set-cookie<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"428 characters\">XSRF-TOKEN=eyJpdiI6ImN6ZGMrVHFXVVoxaGR2VGJLQnBNMHc9PSIsInZhbHVlIjoiWGxnelY2dm43WnU1Z1lSNndPbGQrdXVSK0pBQWNPVlh5SWI4bkExNTlnMnVlSWFVeGFYMmRaWjNSS2NPTWFNSVhvK3VBVTl4RVVreFNISStHMDhqNGxDVytaZkc5aHZzQ2FTc2Zya2dUWWdFQnBDTHhMakJ4V0pmZ1hOV3l3aE0iLCJtYWMiOiJmNmEyNDk1NGIxMTVmMzc4ZGQ4MTcyMTk2NTAyYjI3YjQ2ZDJmNTAyYjZmNWFlNGM1MWUyODZhZTQzMTk0OGNlIiwidGFnIjoiIn0%3D; expires=Mon, 18 Nov 2024 19:18:01 GMT; Max-Age=7200; path=\/; samesite=lax<\/span>\"\n    <span class=sf-dump-index>1<\/span> => \"<span class=sf-dump-str title=\"443 characters\">laravel_session=eyJpdiI6IlVXS0E2RTdpZVpDb1pMeDBLZkErUnc9PSIsInZhbHVlIjoiYllqdjdNRUdXdW8xcjRrQUZ0RGRta1NSZGpVaDRpTW4vcVUzcmdsZnVubHQ2Yk1JTlpMRnNQak0wMmVxTmY5eHlmeERsTFl6NlI4VzNoUndPbzRuU2pkWDg1T2Q3cDhrcHc3TXNVL2lBcjhjZW13TlIyYko2MTZKdlJmcEdRK3QiLCJtYWMiOiIwMWIyOWZjZTYzY2NhNTg5ZDhlYmMxY2Q4MWEyNWJjZWNkMWMwM2E4YTc2YzY1OTg3OWY0NWNlY2E2NzUyNTlkIiwidGFnIjoiIn0%3D; expires=Mon, 18 Nov 2024 19:18:01 GMT; Max-Age=7200; path=\/; httponly; samesite=lax<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>Set-Cookie<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"400 characters\">XSRF-TOKEN=eyJpdiI6ImN6ZGMrVHFXVVoxaGR2VGJLQnBNMHc9PSIsInZhbHVlIjoiWGxnelY2dm43WnU1Z1lSNndPbGQrdXVSK0pBQWNPVlh5SWI4bkExNTlnMnVlSWFVeGFYMmRaWjNSS2NPTWFNSVhvK3VBVTl4RVVreFNISStHMDhqNGxDVytaZkc5aHZzQ2FTc2Zya2dUWWdFQnBDTHhMakJ4V0pmZ1hOV3l3aE0iLCJtYWMiOiJmNmEyNDk1NGIxMTVmMzc4ZGQ4MTcyMTk2NTAyYjI3YjQ2ZDJmNTAyYjZmNWFlNGM1MWUyODZhZTQzMTk0OGNlIiwidGFnIjoiIn0%3D; expires=Mon, 18-Nov-2024 19:18:01 GMT; path=\/<\/span>\"\n    <span class=sf-dump-index>1<\/span> => \"<span class=sf-dump-str title=\"415 characters\">laravel_session=eyJpdiI6IlVXS0E2RTdpZVpDb1pMeDBLZkErUnc9PSIsInZhbHVlIjoiYllqdjdNRUdXdW8xcjRrQUZ0RGRta1NSZGpVaDRpTW4vcVUzcmdsZnVubHQ2Yk1JTlpMRnNQak0wMmVxTmY5eHlmeERsTFl6NlI4VzNoUndPbzRuU2pkWDg1T2Q3cDhrcHc3TXNVL2lBcjhjZW13TlIyYko2MTZKdlJmcEdRK3QiLCJtYWMiOiIwMWIyOWZjZTYzY2NhNTg5ZDhlYmMxY2Q4MWEyNWJjZWNkMWMwM2E4YTc2YzY1OTg3OWY0NWNlY2E2NzUyNTlkIiwidGFnIjoiIn0%3D; expires=Mon, 18-Nov-2024 19:18:01 GMT; path=\/; httponly<\/span>\"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-964043602\", {\"maxDepth\":0})<\/script>\n","session_attributes":"<pre class=sf-dump id=sf-dump-1033492716 data-indent-pad=\"  \"><span class=sf-dump-note>array:4<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>_token<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">NEr4elhnWx80EkKCrWn58WkQ5XsqFJRXbLfQU03r<\/span>\"\n  \"<span class=sf-dump-key>_previous<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    \"<span class=sf-dump-key>url<\/span>\" => \"<span class=sf-dump-str title=\"63 characters\">http:\/\/118.97.163.52:8182\/magang\/pengajuan\/pengajuan-penelitian<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>_flash<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    \"<span class=sf-dump-key>old<\/span>\" => []\n    \"<span class=sf-dump-key>new<\/span>\" => []\n  <\/samp>]\n  \"<span class=sf-dump-key>PHPDEBUGBAR_STACK_DATA<\/span>\" => []\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1033492716\", {\"maxDepth\":0})<\/script>\n"}}, "X890a0b385758d6f1729dcefb3fb69563");
+
+</script>
+</body>
+
+<!-- Mirrored from 118.97.163.52:8182/magang/pengajuan/pengajuan-penelitian by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Nov 2024 17:27:51 GMT -->
+</html>

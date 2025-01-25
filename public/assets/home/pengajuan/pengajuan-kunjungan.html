@@ -1,0 +1,2813 @@
+<!DOCTYPE html>
+<html lang="id">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>INTERNSHIP PALMCO REGIONAL III</title>
+        <meta name="description" content="INTERNSHIP PALMCO REGIONAL III" />
+        <meta
+            name="author"
+            content="Fairuz Irgawan Sinaga & Gusrifaris Yuda Alhafis"
+        />
+        <link rel="canonical" href="http://ptpn5.co.id/magang" />
+        <meta property="og:url" content="http://ptpn5.co.id/magang" />
+        <meta property="og:title" content="INTERNSHIP PALMCO REGIONAL III" />
+        <meta
+            property="og:description"
+            content="INTERNSHIP PALMCO REGIONAL III"
+        />
+        <meta
+            property="og:site_name"
+            content="INTERNSHIP PALMCO REGIONAL III"
+        />
+        <meta property="og:ttl" content="3600" />
+        <!-- Favicon-->
+        <link
+            rel="stylesheet"
+            href="../../../cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+        />
+        <link rel="icon" type="image/x-icon" href="../Logo_PTPN4.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script
+            src="../../../use.fontawesome.com/releases/v6.3.0/js/all.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com/" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../guest/css/styles.css" rel="stylesheet" />
+
+        <script
+            defer
+            src="../../../cdn.jsdelivr.net/npm/alpinejs%403.x.x/dist/cdn.min.js"
+        ></script>
+        <script
+            src="../../../code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="../../../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <style>
+            .heading {
+                height: 8rem;
+                background-color: black;
+            }
+
+            @media (max-width: 992px) {
+                .heading {
+                    opacity: 0;
+                }
+            }
+
+            .root-container {
+                height: min-content;
+                /* background-color: rgba(0, 0, 0, 0.5); */
+            }
+
+            input {
+                height: auto !important;
+                padding: 1.25rem !important;
+            }
+            select {
+                height: auto !important;
+                padding: 1.25rem !important;
+            }
+
+            .flatpickr-month {
+                height: 80px !important;
+                font-size: 15px !important;
+            }
+
+            .flatpickr-monthDropdown-months {
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+
+            .numInputWrapper {
+                width: 40% !important;
+            }
+        </style>
+
+        <script>
+            function handler() {
+                return {
+                    form: {},
+                    errors: {},
+                    isLoading: false,
+                    areas: [
+                        {
+                            kode_area: "EH1A",
+                            nama_area: "Kantor Direksi",
+                            subarea: [
+                                {
+                                    kode_subarea: "DPM",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Distrik Petani Mitra",
+                                    description: "Distrik Petani Mitra",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-industry",
+                                },
+                                {
+                                    kode_subarea: "HKM",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Hukum",
+                                    description: "Hukum",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-scale-balanced",
+                                },
+                                {
+                                    kode_subarea: "KEU",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Keuangan",
+                                    description: "Keuangan",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-money-check-dollar",
+                                },
+                                {
+                                    kode_subarea: "PLP",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea:
+                                        "Pengadaan dan Teknologi Informasi",
+                                    description:
+                                        "Pengadaan dan Teknologi Informasi",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-box",
+                                },
+                                {
+                                    kode_subarea: "PST",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Project Management Office",
+                                    description: "Project Management Office",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-computer",
+                                },
+                                {
+                                    kode_subarea: "SDM",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Sumber Daya Manusia",
+                                    description: "Sumber Daya Manusia",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-users-line",
+                                },
+                                {
+                                    kode_subarea: "SPI",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Satuan Pengawasan Internal",
+                                    description: "Satuan Pengawasan Internal",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-shield-halved",
+                                },
+                                {
+                                    kode_subarea: "SPR",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Sekretariat Perusahaan",
+                                    description: "Sekretariat Perusahaan",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-building",
+                                },
+                                {
+                                    kode_subarea: "TEP",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Teknik dan Pengolahan",
+                                    description: "Teknik dan Pengolahan",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-industry",
+                                },
+                                {
+                                    kode_subarea: "TNM",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Tanaman",
+                                    description: "Tanaman",
+                                    kode_area: "EH1A",
+                                    icon: "fa-solid fa-tree",
+                                },
+                            ],
+                        },
+                        {
+                            kode_area: "EK1A",
+                            nama_area: "Kebun",
+                            subarea: [
+                                {
+                                    kode_subarea: "EK01",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Galuh",
+                                    description: "Kebun Sei Galuh",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK02",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Garo",
+                                    description: "Kebun Sei Garo",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK03",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Pagar",
+                                    description: "Kebun Sei Pagar",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK04",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Tanjung Medan",
+                                    description: "Kebun Tanjung Medan",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK05",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Tanah Putih",
+                                    description: "Kebun Tanah Putih",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK06",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "TBS Sei Garo",
+                                    description: "TBS Sei Garo",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK07",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "TBS.Tanah Putih",
+                                    description: "TBS.Tanah Putih",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK08",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Lubuk Dalam",
+                                    description: "Kebun Lubuk Dalam",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK09",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Buatan",
+                                    description: "Kebun Sei Buatan",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK10",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun AirMolek 1",
+                                    description: "Kebun AirMolek 1",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK11",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun AirMolek II",
+                                    description: "Kebun AirMolek II",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK12",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "TBS.Sei Buatan",
+                                    description: "TBS.Sei Buatan",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK13",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Tandun",
+                                    description: "Kebun Tandun",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK14",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Terantam",
+                                    description: "Kebun Terantam",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK15",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Kencana",
+                                    description: "Kebun Sei Kencana",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK16",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Lindai",
+                                    description: "Kebun Sei Lindai",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK17",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Tamora",
+                                    description: "Kebun Tamora",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK18",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Batulangkah",
+                                    description: "Kebun Sei Batulangkah",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK20",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Rokan",
+                                    description: "Kebun Sei Rokan",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK21",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Intan",
+                                    description: "Kebun Sei Intan",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK22",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Siasam",
+                                    description: "Kebun Sei Siasam",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK23",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Tapung",
+                                    description: "Kebun Sei Tapung",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK24",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "Kebun Sei Berlian",
+                                    description: "Kebun Sei Berlian",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EK25",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "TBS.Sei Tapung",
+                                    description: "TBS.Sei Tapung",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "N5M",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PT. Nusa Lima Medika",
+                                    description: "-",
+                                    kode_area: "EK1A",
+                                    icon: null,
+                                },
+                            ],
+                        },
+                        {
+                            kode_area: "EP1A",
+                            nama_area: "Pabrik",
+                            subarea: [
+                                {
+                                    kode_subarea: "EP01",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Tanah Putih",
+                                    description: "PKS Tanah Putih",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP02",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Tjg Medan",
+                                    description: "PKS Tjg Medan",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP03",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Galuh",
+                                    description: "PKS Sei Galuh",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP04",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Pagar",
+                                    description: "PKS Sei Pagar",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP05",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Garo",
+                                    description: "PKS Sei Garo",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP06",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Buatan",
+                                    description: "PKS Sei Buatan",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP07",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Lubuk Dalam",
+                                    description: "PKS Lubuk Dalam",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP08",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Tandun",
+                                    description: "PKS Tandun",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP09",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Terantam",
+                                    description: "PKS Terantam",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP10",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Tapung",
+                                    description: "PKS Sei Tapung",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP11",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Rokan",
+                                    description: "PKS Sei Rokan",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP12",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKS Sei Intan",
+                                    description: "PKS Sei Intan",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP13",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PKO Tandun",
+                                    description: "PKO Tandun",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP14",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PPKR Sei Lindai",
+                                    description: "PPKR Sei Lindai",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                                {
+                                    kode_subarea: "EP15",
+                                    induk: null,
+                                    kuota_total: null,
+                                    nama_subarea: "PPKR B.Selasih",
+                                    description: "PPKR B.Selasih",
+                                    kode_area: "EP1A",
+                                    icon: null,
+                                },
+                            ],
+                        },
+                    ],
+                    jenjangPendidikan: [
+                        {
+                            id: 2,
+                            nama_jenjang: "SMA\/SMK",
+                            is_aktif: 1,
+                            is_need_fakultas: 0,
+                        },
+                        {
+                            id: 3,
+                            nama_jenjang: "S1\/D4\/D3",
+                            is_aktif: 1,
+                            is_need_fakultas: 1,
+                        },
+                    ],
+                    subareas: [],
+                    bidang: [], // Tambahkan bidang ke state
+                    isNeedFakultas: false,
+
+                    // Fungsi untuk merespons perubahan jenjang pendidikan
+                    changeJenjangPendidikan() {
+                        const jenjang = this.jenjangPendidikan.filter(
+                            (data) => {
+                                if (
+                                    data.id == this.form.id_jenjang_pendidikan
+                                ) {
+                                    this.isNeedFakultas = data.is_need_fakultas;
+                                    if (!this.isNeedFakultas) {
+                                        const { fakultas, ...rest } = this.form;
+                                        this.form = rest;
+                                    } else {
+                                        this.form.fakultas = "";
+                                    }
+                                    return;
+                                }
+                            }
+                        );
+                    },
+
+                    // Fungsi untuk merespons perubahan area dan memuat subarea yang sesuai
+                    renderSubArea() {
+                        const subarea = this.areas.filter(
+                            (data) => data.kode_area == this.form.kode_area
+                        );
+                        if (subarea.length) {
+                            this.subareas = subarea[0].subarea;
+                            this.form.kode_subarea = ""; // Reset pilihan subarea
+                            this.bidang = []; // Reset pilihan bidang setiap kali area berubah
+                        }
+                    },
+
+                    // Render bidang setelah subarea dipilih
+                    renderBidang() {
+                        if (this.form.kode_subarea) {
+                            axios
+                                .get(
+                                    `http://118.97.163.52:8182/magang/api/get-bidang/${this.form.kode_subarea}`
+                                )
+                                .then((response) => {
+                                    // Filter bidang yang kuotanya lebih dari 0
+                                    this.bidang = response.data.filter(
+                                        (bidang) => bidang.kuota > 0
+                                    );
+                                    this.form.kode_bidang = ""; // Reset pilihan bidang
+                                })
+                                .catch((error) => {
+                                    console.error(error);
+                                });
+                        } else {
+                            this.bidang = []; // Reset jika subarea belum dipilih
+                        }
+                    },
+
+                    // Fungsi untuk menyimpan form
+                    async store(e) {
+                        this.isLoading = true;
+                        this.errors = {};
+                        console.log(this.form);
+                        const url = e.target.action;
+                        await axios
+                            .post(url, this.form, {
+                                headers: {
+                                    "Content-Type": "multipart/form-data",
+                                },
+                            })
+                            .then((response) => {
+                                location.reload();
+                            })
+                            .catch((e) => {
+                                if (e.response.status == 422) {
+                                    this.errors = e.response.data.errors;
+                                }
+                            });
+                        this.isLoading = false;
+                    },
+
+                    // Fungsi untuk mereset input file
+                    resetInputFile() {
+                        $("input[type='file']").val("");
+                    },
+                };
+            }
+        </script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            property="stylesheet"
+            href="http://118.97.163.52:8182/_debugbar/assets/stylesheets?v=1710323434&amp;theme=auto"
+            data-turbolinks-eval="false"
+            data-turbo-eval="false"
+        />
+        <script
+            src="http://118.97.163.52:8182/_debugbar/assets/javascript?v=1710323434"
+            data-turbolinks-eval="false"
+            data-turbo-eval="false"
+        ></script>
+        <script data-turbo-eval="false">
+            jQuery.noConflict(true);
+        </script>
+        <script>
+            Sfdump =
+                window.Sfdump ||
+                (function (doc) {
+                    doc.documentElement.classList.add("sf-js-enabled");
+                    var rxEsc = /([.*+?^${}()|\[\]\/\\])/g,
+                        idRx = /\bsf-dump-\d+-ref[012]\w+\b/,
+                        keyHint =
+                            0 <= navigator.platform.toUpperCase().indexOf("MAC")
+                                ? "Cmd"
+                                : "Ctrl",
+                        addEventListener = function (e, n, cb) {
+                            e.addEventListener(n, cb, false);
+                        };
+                    if (!doc.addEventListener) {
+                        addEventListener = function (
+                            element,
+                            eventName,
+                            callback
+                        ) {
+                            element.attachEvent("on" + eventName, function (e) {
+                                e.preventDefault = function () {
+                                    e.returnValue = false;
+                                };
+                                e.target = e.srcElement;
+                                callback(e);
+                            });
+                        };
+                    }
+                    function toggle(a, recursive) {
+                        var s = a.nextSibling || {},
+                            oldClass = s.className,
+                            arrow,
+                            newClass;
+                        if (/\bsf-dump-compact\b/.test(oldClass)) {
+                            arrow = "▼";
+                            newClass = "sf-dump-expanded";
+                        } else if (/\bsf-dump-expanded\b/.test(oldClass)) {
+                            arrow = "▶";
+                            newClass = "sf-dump-compact";
+                        } else {
+                            return false;
+                        }
+                        if (doc.createEvent && s.dispatchEvent) {
+                            var event = doc.createEvent("Event");
+                            event.initEvent(
+                                "sf-dump-expanded" === newClass
+                                    ? "sfbeforedumpexpand"
+                                    : "sfbeforedumpcollapse",
+                                true,
+                                false
+                            );
+                            s.dispatchEvent(event);
+                        }
+                        a.lastChild.innerHTML = arrow;
+                        s.className = s.className.replace(
+                            /\bsf-dump-(compact|expanded)\b/,
+                            newClass
+                        );
+                        if (recursive) {
+                            try {
+                                a = s.querySelectorAll("." + oldClass);
+                                for (s = 0; s < a.length; ++s) {
+                                    if (
+                                        -1 == a[s].className.indexOf(newClass)
+                                    ) {
+                                        a[s].className = newClass;
+                                        a[
+                                            s
+                                        ].previousSibling.lastChild.innerHTML =
+                                            arrow;
+                                    }
+                                }
+                            } catch (e) {}
+                        }
+                        return true;
+                    }
+                    function collapse(a, recursive) {
+                        var s = a.nextSibling || {},
+                            oldClass = s.className;
+                        if (/\bsf-dump-expanded\b/.test(oldClass)) {
+                            toggle(a, recursive);
+                            return true;
+                        }
+                        return false;
+                    }
+                    function expand(a, recursive) {
+                        var s = a.nextSibling || {},
+                            oldClass = s.className;
+                        if (/\bsf-dump-compact\b/.test(oldClass)) {
+                            toggle(a, recursive);
+                            return true;
+                        }
+                        return false;
+                    }
+                    function collapseAll(root) {
+                        var a = root.querySelector("a.sf-dump-toggle");
+                        if (a) {
+                            collapse(a, true);
+                            expand(a);
+                            return true;
+                        }
+                        return false;
+                    }
+                    function reveal(node) {
+                        var previous,
+                            parents = [];
+                        while (
+                            (node = node.parentNode || {}) &&
+                            (previous = node.previousSibling) &&
+                            "A" === previous.tagName
+                        ) {
+                            parents.push(previous);
+                        }
+                        if (0 !== parents.length) {
+                            parents.forEach(function (parent) {
+                                expand(parent);
+                            });
+                            return true;
+                        }
+                        return false;
+                    }
+                    function highlight(root, activeNode, nodes) {
+                        resetHighlightedNodes(root);
+                        Array.from(nodes || []).forEach(function (node) {
+                            if (!/\bsf-dump-highlight\b/.test(node.className)) {
+                                node.className =
+                                    node.className + " sf-dump-highlight";
+                            }
+                        });
+                        if (
+                            !/\bsf-dump-highlight-active\b/.test(
+                                activeNode.className
+                            )
+                        ) {
+                            activeNode.className =
+                                activeNode.className +
+                                " sf-dump-highlight-active";
+                        }
+                    }
+                    function resetHighlightedNodes(root) {
+                        Array.from(
+                            root.querySelectorAll(
+                                ".sf-dump-str, .sf-dump-key, .sf-dump-public, .sf-dump-protected, .sf-dump-private"
+                            )
+                        ).forEach(function (strNode) {
+                            strNode.className = strNode.className.replace(
+                                /\bsf-dump-highlight\b/,
+                                ""
+                            );
+                            strNode.className = strNode.className.replace(
+                                /\bsf-dump-highlight-active\b/,
+                                ""
+                            );
+                        });
+                    }
+                    return function (root, x) {
+                        root = doc.getElementById(root);
+                        var indentRx = new RegExp(
+                                "^(" +
+                                    (
+                                        root.getAttribute("data-indent-pad") ||
+                                        " "
+                                    ).replace(rxEsc, "\\$1") +
+                                    ")+",
+                                "m"
+                            ),
+                            options = {
+                                maxDepth: 1,
+                                maxStringLength: 160,
+                                fileLinkFormat: false,
+                            },
+                            elt = root.getElementsByTagName("A"),
+                            len = elt.length,
+                            i = 0,
+                            s,
+                            h,
+                            t = [];
+                        while (i < len) t.push(elt[i++]);
+                        for (i in x) {
+                            options[i] = x[i];
+                        }
+                        function a(e, f) {
+                            addEventListener(root, e, function (e, n) {
+                                if ("A" == e.target.tagName) {
+                                    f(e.target, e);
+                                } else if ("A" == e.target.parentNode.tagName) {
+                                    f(e.target.parentNode, e);
+                                } else {
+                                    n = /\bsf-dump-ellipsis\b/.test(
+                                        e.target.className
+                                    )
+                                        ? e.target.parentNode
+                                        : e.target;
+                                    if (
+                                        (n = n.nextElementSibling) &&
+                                        "A" == n.tagName
+                                    ) {
+                                        if (
+                                            !/\bsf-dump-toggle\b/.test(
+                                                n.className
+                                            )
+                                        ) {
+                                            n = n.nextElementSibling || n;
+                                        }
+                                        f(n, e, true);
+                                    }
+                                }
+                            });
+                        }
+                        function isCtrlKey(e) {
+                            return e.ctrlKey || e.metaKey;
+                        }
+                        function xpathString(str) {
+                            var parts = str
+                                .match(/[^'"]+|['"]/g)
+                                .map(function (part) {
+                                    if ("'" == part) {
+                                        return '"\'"';
+                                    }
+                                    if ('"' == part) {
+                                        return "'\"'";
+                                    }
+                                    return "'" + part + "'";
+                                });
+                            return "concat(" + parts.join(",") + ", '')";
+                        }
+                        function xpathHasClass(className) {
+                            return (
+                                "contains(concat(' ', normalize-space(@class), ' '), ' " +
+                                className +
+                                " ')"
+                            );
+                        }
+                        a("mouseover", function (a, e, c) {
+                            if (c) {
+                                e.target.style.cursor = "pointer";
+                            }
+                        });
+                        a("click", function (a, e, c) {
+                            if (/\bsf-dump-toggle\b/.test(a.className)) {
+                                e.preventDefault();
+                                if (!toggle(a, isCtrlKey(e))) {
+                                    var r = doc.getElementById(
+                                            a.getAttribute("href").slice(1)
+                                        ),
+                                        s = r.previousSibling,
+                                        f = r.parentNode,
+                                        t = a.parentNode;
+                                    t.replaceChild(r, a);
+                                    f.replaceChild(a, s);
+                                    t.insertBefore(s, r);
+                                    f = f.firstChild.nodeValue.match(indentRx);
+                                    t = t.firstChild.nodeValue.match(indentRx);
+                                    if (f && t && f[0] !== t[0]) {
+                                        r.innerHTML = r.innerHTML.replace(
+                                            new RegExp(
+                                                "^" +
+                                                    f[0].replace(rxEsc, "\\$1"),
+                                                "mg"
+                                            ),
+                                            t[0]
+                                        );
+                                    }
+                                    if (
+                                        /\bsf-dump-compact\b/.test(r.className)
+                                    ) {
+                                        toggle(s, isCtrlKey(e));
+                                    }
+                                }
+                                if (c) {
+                                } else if (doc.getSelection) {
+                                    try {
+                                        doc.getSelection().removeAllRanges();
+                                    } catch (e) {
+                                        doc.getSelection().empty();
+                                    }
+                                } else {
+                                    doc.selection.empty();
+                                }
+                            } else if (
+                                /\bsf-dump-str-toggle\b/.test(a.className)
+                            ) {
+                                e.preventDefault();
+                                e = a.parentNode.parentNode;
+                                e.className = e.className.replace(
+                                    /\bsf-dump-str-(expand|collapse)\b/,
+                                    a.parentNode.className
+                                );
+                            }
+                        });
+                        elt = root.getElementsByTagName("SAMP");
+                        len = elt.length;
+                        i = 0;
+                        while (i < len) t.push(elt[i++]);
+                        len = t.length;
+                        for (i = 0; i < len; ++i) {
+                            elt = t[i];
+                            if ("SAMP" == elt.tagName) {
+                                a = elt.previousSibling || {};
+                                if ("A" != a.tagName) {
+                                    a = doc.createElement("A");
+                                    a.className = "sf-dump-ref";
+                                    elt.parentNode.insertBefore(a, elt);
+                                } else {
+                                    a.innerHTML += " ";
+                                }
+                                a.title =
+                                    (a.title ? a.title + "\n[" : "[") +
+                                    keyHint +
+                                    "+click] Expand all children";
+                                a.innerHTML +=
+                                    elt.className == "sf-dump-compact"
+                                        ? "<span>▶</span>"
+                                        : "<span>▼</span>";
+                                a.className += " sf-dump-toggle";
+                                x = 1;
+                                if ("sf-dump" != elt.parentNode.className) {
+                                    x +=
+                                        elt.parentNode.getAttribute(
+                                            "data-depth"
+                                        ) / 1;
+                                }
+                            } else if (
+                                /\bsf-dump-ref\b/.test(elt.className) &&
+                                (a = elt.getAttribute("href"))
+                            ) {
+                                a = a.slice(1);
+                                elt.className += " sf-dump-hover";
+                                elt.className += " " + a;
+                                if (
+                                    /[\[{]$/.test(elt.previousSibling.nodeValue)
+                                ) {
+                                    a =
+                                        a != elt.nextSibling.id &&
+                                        doc.getElementById(a);
+                                    try {
+                                        s = a.nextSibling;
+                                        elt.appendChild(a);
+                                        s.parentNode.insertBefore(a, s);
+                                        if (/^[@#]/.test(elt.innerHTML)) {
+                                            elt.innerHTML += " <span>▶</span>";
+                                        } else {
+                                            elt.innerHTML = "<span>▶</span>";
+                                            elt.className = "sf-dump-ref";
+                                        }
+                                        elt.className += " sf-dump-toggle";
+                                    } catch (e) {
+                                        if ("&" == elt.innerHTML.charAt(0)) {
+                                            elt.innerHTML = "…";
+                                            elt.className = "sf-dump-ref";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (
+                            doc.evaluate &&
+                            Array.from &&
+                            root.children.length > 1
+                        ) {
+                            root.setAttribute("tabindex", 0);
+                            SearchState = function () {
+                                this.nodes = [];
+                                this.idx = 0;
+                            };
+                            SearchState.prototype = {
+                                next: function () {
+                                    if (this.isEmpty()) {
+                                        return this.current();
+                                    }
+                                    this.idx =
+                                        this.idx < this.nodes.length - 1
+                                            ? this.idx + 1
+                                            : 0;
+                                    return this.current();
+                                },
+                                previous: function () {
+                                    if (this.isEmpty()) {
+                                        return this.current();
+                                    }
+                                    this.idx =
+                                        this.idx > 0
+                                            ? this.idx - 1
+                                            : this.nodes.length - 1;
+                                    return this.current();
+                                },
+                                isEmpty: function () {
+                                    return 0 === this.count();
+                                },
+                                current: function () {
+                                    if (this.isEmpty()) {
+                                        return null;
+                                    }
+                                    return this.nodes[this.idx];
+                                },
+                                reset: function () {
+                                    this.nodes = [];
+                                    this.idx = 0;
+                                },
+                                count: function () {
+                                    return this.nodes.length;
+                                },
+                            };
+                            function showCurrent(state) {
+                                var currentNode = state.current(),
+                                    currentRect,
+                                    searchRect;
+                                if (currentNode) {
+                                    reveal(currentNode);
+                                    highlight(root, currentNode, state.nodes);
+                                    if ("scrollIntoView" in currentNode) {
+                                        currentNode.scrollIntoView(true);
+                                        currentRect =
+                                            currentNode.getBoundingClientRect();
+                                        searchRect =
+                                            search.getBoundingClientRect();
+                                        if (
+                                            currentRect.top <
+                                            searchRect.top + searchRect.height
+                                        ) {
+                                            window.scrollBy(
+                                                0,
+                                                -(
+                                                    searchRect.top +
+                                                    searchRect.height +
+                                                    5
+                                                )
+                                            );
+                                        }
+                                    }
+                                }
+                                counter.textContent =
+                                    (state.isEmpty() ? 0 : state.idx + 1) +
+                                    " of " +
+                                    state.count();
+                            }
+                            var search = doc.createElement("div");
+                            search.className =
+                                "sf-dump-search-wrapper sf-dump-search-hidden";
+                            search.innerHTML =
+                                ' <input type="text" class="sf-dump-search-input"> <span class="sf-dump-search-count">0 of 0<\/span> <button type="button" class="sf-dump-search-input-previous" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19L896 965l-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> <button type="button" class="sf-dump-search-input-next" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 808l-742 741q-19 19-45 19t-45-19L109 808q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> ';
+                            root.insertBefore(search, root.firstChild);
+                            var state = new SearchState();
+                            var searchInput = search.querySelector(
+                                ".sf-dump-search-input"
+                            );
+                            var counter = search.querySelector(
+                                ".sf-dump-search-count"
+                            );
+                            var searchInputTimer = 0;
+                            var previousSearchQuery = "";
+                            addEventListener(
+                                searchInput,
+                                "keyup",
+                                function (e) {
+                                    var searchQuery = e.target.value;
+                                    /* Don't perform anything if the pressed key didn't change the query */ if (
+                                        searchQuery === previousSearchQuery
+                                    ) {
+                                        return;
+                                    }
+                                    previousSearchQuery = searchQuery;
+                                    clearTimeout(searchInputTimer);
+                                    searchInputTimer = setTimeout(function () {
+                                        state.reset();
+                                        collapseAll(root);
+                                        resetHighlightedNodes(root);
+                                        if ("" === searchQuery) {
+                                            counter.textContent = "0 of 0";
+                                            return;
+                                        }
+                                        var classMatches = [
+                                            "sf-dump-str",
+                                            "sf-dump-key",
+                                            "sf-dump-public",
+                                            "sf-dump-protected",
+                                            "sf-dump-private",
+                                        ]
+                                            .map(xpathHasClass)
+                                            .join(" or ");
+                                        var xpathResult = doc.evaluate(
+                                            ".//span[" +
+                                                classMatches +
+                                                "][contains(translate(child::text(), " +
+                                                xpathString(
+                                                    searchQuery.toUpperCase()
+                                                ) +
+                                                ", " +
+                                                xpathString(
+                                                    searchQuery.toLowerCase()
+                                                ) +
+                                                "), " +
+                                                xpathString(
+                                                    searchQuery.toLowerCase()
+                                                ) +
+                                                ")]",
+                                            root,
+                                            null,
+                                            XPathResult.ORDERED_NODE_ITERATOR_TYPE,
+                                            null
+                                        );
+                                        while (
+                                            (node = xpathResult.iterateNext())
+                                        )
+                                            state.nodes.push(node);
+                                        showCurrent(state);
+                                    }, 400);
+                                }
+                            );
+                            Array.from(
+                                search.querySelectorAll(
+                                    ".sf-dump-search-input-next, .sf-dump-search-input-previous"
+                                )
+                            ).forEach(function (btn) {
+                                addEventListener(btn, "click", function (e) {
+                                    e.preventDefault();
+                                    -1 !== e.target.className.indexOf("next")
+                                        ? state.next()
+                                        : state.previous();
+                                    searchInput.focus();
+                                    collapseAll(root);
+                                    showCurrent(state);
+                                });
+                            });
+                            addEventListener(root, "keydown", function (e) {
+                                var isSearchActive =
+                                    !/\bsf-dump-search-hidden\b/.test(
+                                        search.className
+                                    );
+                                if (
+                                    (114 === e.keyCode && !isSearchActive) ||
+                                    (isCtrlKey(e) && 70 === e.keyCode)
+                                ) {
+                                    /* F3 or CMD/CTRL + F */ if (
+                                        70 === e.keyCode &&
+                                        document.activeElement === searchInput
+                                    ) {
+                                        /* * If CMD/CTRL + F is hit while having focus on search input, * the user probably meant to trigger browser search instead. * Let the browser execute its behavior: */ return;
+                                    }
+                                    e.preventDefault();
+                                    search.className = search.className.replace(
+                                        /\bsf-dump-search-hidden\b/,
+                                        ""
+                                    );
+                                    searchInput.focus();
+                                } else if (isSearchActive) {
+                                    if (27 === e.keyCode) {
+                                        /* ESC key */ search.className +=
+                                            " sf-dump-search-hidden";
+                                        e.preventDefault();
+                                        resetHighlightedNodes(root);
+                                        searchInput.value = "";
+                                    } else if (
+                                        (isCtrlKey(e) &&
+                                            71 ===
+                                                e.keyCode) /* CMD/CTRL + G */ ||
+                                        13 === e.keyCode /* Enter */ ||
+                                        114 === e.keyCode /* F3 */
+                                    ) {
+                                        e.preventDefault();
+                                        e.shiftKey
+                                            ? state.previous()
+                                            : state.next();
+                                        collapseAll(root);
+                                        showCurrent(state);
+                                    }
+                                }
+                            });
+                        }
+                        if (0 >= options.maxStringLength) {
+                            return;
+                        }
+                        try {
+                            elt = root.querySelectorAll(".sf-dump-str");
+                            len = elt.length;
+                            i = 0;
+                            t = [];
+                            while (i < len) t.push(elt[i++]);
+                            len = t.length;
+                            for (i = 0; i < len; ++i) {
+                                elt = t[i];
+                                s = elt.innerText || elt.textContent;
+                                x = s.length - options.maxStringLength;
+                                if (0 < x) {
+                                    h = elt.innerHTML;
+                                    elt[
+                                        elt.innerText
+                                            ? "innerText"
+                                            : "textContent"
+                                    ] = s.substring(0, options.maxStringLength);
+                                    elt.className += " sf-dump-str-collapse";
+                                    elt.innerHTML =
+                                        "<span class=sf-dump-str-collapse>" +
+                                        h +
+                                        '<a class="sf-dump-ref sf-dump-str-toggle" title="Collapse"> ◀</a></span>' +
+                                        "<span class=sf-dump-str-expand>" +
+                                        elt.innerHTML +
+                                        '<a class="sf-dump-ref sf-dump-str-toggle" title="' +
+                                        x +
+                                        ' remaining characters"> ▶</a></span>';
+                                }
+                            }
+                        } catch (e) {}
+                    };
+                })(document);
+        </script>
+        <style>
+            .sf-js-enabled .phpdebugbar pre.sf-dump .sf-dump-compact,
+            .sf-js-enabled .sf-dump-str-collapse .sf-dump-str-collapse,
+            .sf-js-enabled .sf-dump-str-expand .sf-dump-str-expand {
+                display: none;
+            }
+            .sf-dump-hover:hover {
+                background-color: #b729d9;
+                color: #fff !important;
+                border-radius: 2px;
+            }
+            .phpdebugbar pre.sf-dump {
+                display: block;
+                white-space: pre;
+                padding: 5px;
+                overflow: initial !important;
+            }
+            .phpdebugbar pre.sf-dump:after {
+                content: "";
+                visibility: hidden;
+                display: block;
+                height: 0;
+                clear: both;
+            }
+            .phpdebugbar pre.sf-dump span {
+                display: inline-flex;
+            }
+            .phpdebugbar pre.sf-dump a {
+                text-decoration: none;
+                cursor: pointer;
+                border: 0;
+                outline: none;
+                color: inherit;
+            }
+            .phpdebugbar pre.sf-dump img {
+                max-width: 50em;
+                max-height: 50em;
+                margin: 0.5em 0 0 0;
+                padding: 0;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAHUlEQVQY02O8zAABilCaiQEN0EeA8QuUcX9g3QEAAjcC5piyhyEAAAAASUVORK5CYII=)
+                    #d3d3d3;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-ellipsis {
+                display: inline-block;
+                overflow: visible;
+                text-overflow: ellipsis;
+                max-width: 5em;
+                white-space: nowrap;
+                overflow: hidden;
+                vertical-align: top;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-ellipsis + .sf-dump-ellipsis {
+                max-width: none;
+            }
+            .phpdebugbar pre.sf-dump code {
+                display: inline;
+                padding: 0;
+                background: none;
+            }
+            .sf-dump-public.sf-dump-highlight,
+            .sf-dump-protected.sf-dump-highlight,
+            .sf-dump-private.sf-dump-highlight,
+            .sf-dump-str.sf-dump-highlight,
+            .sf-dump-key.sf-dump-highlight {
+                background: rgba(111, 172, 204, 0.3);
+                border: 1px solid #7da0b1;
+                border-radius: 3px;
+            }
+            .sf-dump-public.sf-dump-highlight-active,
+            .sf-dump-protected.sf-dump-highlight-active,
+            .sf-dump-private.sf-dump-highlight-active,
+            .sf-dump-str.sf-dump-highlight-active,
+            .sf-dump-key.sf-dump-highlight-active {
+                background: rgba(253, 175, 0, 0.4);
+                border: 1px solid #ffa500;
+                border-radius: 3px;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-search-hidden {
+                display: none !important;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-search-wrapper {
+                font-size: 0;
+                white-space: nowrap;
+                margin-bottom: 5px;
+                display: flex;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 5px;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > * {
+                vertical-align: top;
+                box-sizing: border-box;
+                height: 21px;
+                font-weight: normal;
+                border-radius: 0;
+                background: #fff;
+                color: #757575;
+                border: 1px solid #bbb;
+            }
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > input.sf-dump-search-input {
+                padding: 3px;
+                height: 21px;
+                font-size: 12px;
+                border-right: none;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                color: #000;
+                min-width: 15px;
+                width: 100%;
+            }
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > .sf-dump-search-input-next,
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > .sf-dump-search-input-previous {
+                background: #f2f2f2;
+                outline: none;
+                border-left: none;
+                font-size: 0;
+                line-height: 0;
+            }
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > .sf-dump-search-input-next {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > .sf-dump-search-input-next
+                > svg,
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > .sf-dump-search-input-previous
+                > svg {
+                pointer-events: none;
+                width: 12px;
+                height: 12px;
+            }
+            .phpdebugbar
+                pre.sf-dump
+                .sf-dump-search-wrapper
+                > .sf-dump-search-count {
+                display: inline-block;
+                padding: 0 5px;
+                margin: 0;
+                border-left: none;
+                line-height: 21px;
+                font-size: 12px;
+            }
+            .phpdebugbar pre.sf-dump,
+            .phpdebugbar pre.sf-dump .sf-dump-default {
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                word-break: normal;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-num {
+                font-weight: bold;
+                color: #1299da;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-const {
+                font-weight: bold;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-str {
+                font-weight: bold;
+                color: #3a9b26;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-note {
+                color: #1299da;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-ref {
+                color: #7b7b7b;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-public {
+                color: #000000;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-protected {
+                color: #000000;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-private {
+                color: #000000;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-meta {
+                color: #b729d9;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-key {
+                color: #3a9b26;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-index {
+                color: #1299da;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-ellipsis {
+                color: #a0a000;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-ns {
+                user-select: none;
+            }
+            .phpdebugbar pre.sf-dump .sf-dump-ellipsis-note {
+                color: #1299da;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a
+                    class="navbar-brand"
+                    href="http://118.97.163.52:8182/magang/home"
+                    ><img src="../img/Logo_PTPN4.png" alt="..."
+                /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="http://118.97.163.52:8182/magang/home"
+                                >Beranda</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="http://118.97.163.52:8182/magang/pengajuan"
+                                >Pengajuan</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="http://118.97.163.52:8182/magang/tracking-pengajuan"
+                                >Cek Pengajuan</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="http://118.97.163.52:8182/magang/idcard"
+                                >ID Card</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="http://118.97.163.52:8182/magang/log-in"
+                                >Login</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="heading"></div>
+        <div x-data="handler" x-init="resetInputFile" class="root-container">
+            <div class="container" style="padding-top: 3rem">
+                <h3 class="text-center"><u>Pengajuan Kunjungan</u></h3>
+                <h4 class="text-center">Silahkan Mengisi Form Dibawah Ini</h4>
+                <div class="jumbotron mt-3 bg-light jumbotron-fluid">
+                    <div class="container">
+                        <h6>Petunjuk Pengisian:</h6>
+                        <ol style="list-style: decimal">
+                            <li>
+                                Inputan yang bertanda
+                                <span class="text-danger">*</span> wajib diisi
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <form
+                    @submit.prevent="store"
+                    action="http://118.97.163.52:8182/magang/pengajuan"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    class="mt-4"
+                >
+                    <input
+                        type="hidden"
+                        x-model="form.id_jenis_pengajuan"
+                        x-init="form.id_jenis_pengajuan = `7`"
+                    />
+                    <input
+                        type="hidden"
+                        name="_token"
+                        value="RI1Vxnc9VmDcOyBuaPLO7fb9OxkBmrGyPK9K63Gb"
+                        autocomplete="off"
+                    />
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="mb-3">
+                                <label
+                                    for="instansi_kunjungan"
+                                    class="form-label"
+                                    ><span class="text-danger">*</span> Nama
+                                    Instansi</label
+                                >
+                                <input
+                                    type="text"
+                                    name="instansi_kunjungan"
+                                    x-model="form.instansi_kunjungan"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.instansi_kunjungan}"
+                                    id="instansi_kunjungan"
+                                    placeholder="Masukkan Nama Instansi"
+                                />
+                                <template x-if="errors.instansi_kunjungan">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.instansi_kunjungan"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label"
+                                    ><span class="text-danger">*</span> Email
+                                    yang dapat dihubungi (Untuk menerima notif
+                                    dan balasan)</label
+                                >
+                                <input
+                                    type="text"
+                                    name="email"
+                                    x-model="form.email"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.email}"
+                                    id="email"
+                                    placeholder="Masukkan Email"
+                                />
+                                <template x-if="errors.email">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.email"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nomor_hp" class="form-label"
+                                    ><span class="text-danger">*</span> No HP
+                                    (contoh format: 628xxxxxx)</label
+                                >
+                                <input
+                                    type="text"
+                                    x-model="form.nomor_hp"
+                                    name="nomor_hp"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.nomor_hp}"
+                                    id="nomor_hp"
+                                    placeholder="Masukkan nomor hp anda"
+                                />
+                                <template x-if="errors.nomor_hp">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.nomor_hp"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label
+                                    for="periode_kunjungan"
+                                    class="form-label"
+                                    ><span class="text-danger">*</span> Periode
+                                    Kunjungan</label
+                                >
+                                <input
+                                    placeholder="Masukkan Periode"
+                                    type="date"
+                                    class="form-control periode"
+                                    :class="{'is-invalid': errors.periode_kunjungan}"
+                                    x-model="form.periode_kunjungan"
+                                />
+                                <template x-if="errors.periode_kunjungan">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.periode_kunjungan"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label for="area" class="form-label"
+                                    ><span class="text-danger">*</span> Pilih
+                                    Tempat Kunjungan</label
+                                >
+                                <select
+                                    @change="renderSubArea"
+                                    x-model="form.kode_area"
+                                    class="form-select"
+                                    :class="{'is-invalid': errors.kode_area}"
+                                    id="area"
+                                    name="area"
+                                    aria-label="Default select example"
+                                >
+                                    <option value="">Pilih Tempat</option>
+                                    <option value="EH1A">Kantor Direksi</option>
+                                    <option value="EK1A">Kebun</option>
+                                    <option value="EP1A">Pabrik</option>
+                                </select>
+                                <template x-if="errors.kode_area">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.kode_area"
+                                    ></div>
+                                </template>
+                            </div>
+                            <template x-if="form.kode_area">
+                                <div class="mb-3">
+                                    <label for="kode_subarea" class="form-label"
+                                        ><span class="text-danger">*</span> Sub
+                                        Area/Bagian Yang Dituju</label
+                                    >
+                                    <select
+                                        class="form-select"
+                                        :class="{'is-invalid': errors.kode_subarea}"
+                                        x-model="form.kode_subarea"
+                                        id="kode_subarea"
+                                        name="kode_subarea"
+                                        aria-label="Default select example"
+                                    >
+                                        <option value="">
+                                            Pilih Sub Area/Bagian
+                                        </option>
+                                        <template
+                                            x-for="(subarea, index) in subareas"
+                                            :key="index"
+                                        >
+                                            <option
+                                                :value="subarea.kode_subarea"
+                                                x-text="subarea.nama_subarea"
+                                            ></option>
+                                        </template>
+                                    </select>
+                                    <template x-if="errors.kode_subarea">
+                                        <div
+                                            class="invalid-feedback"
+                                            x-text="errors.kode_subarea"
+                                        ></div>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="mb-3">
+                                <label
+                                    for="jumlah_orang_kunjungan"
+                                    class="form-label"
+                                    ><span class="text-danger">*</span> Jumlah
+                                    Orang</label
+                                >
+                                <input
+                                    type="text"
+                                    name="jumlah_orang_kunjungan"
+                                    x-model="form.jumlah_orang_kunjungan"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.jumlah_orang_kunjungan}"
+                                    id="jumlah_orang_kunjungan"
+                                    placeholder="Masukkan Jumlah Orang"
+                                />
+                                <template x-if="errors.jumlah_orang_kunjungan">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.jumlah_orang_kunjungan"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label
+                                    for="materi_yang_dipelajari"
+                                    class="form-label"
+                                    ><span class="text-danger">*</span> Materi
+                                    Yang Akan Dipelajari</label
+                                >
+                                <input
+                                    type="text"
+                                    name="materi_yang_dipelajari"
+                                    x-model="form.materi_yang_dipelajari"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.materi_yang_dipelajari}"
+                                    id="materi_yang_dipelajari"
+                                    placeholder="Masukkan Materi"
+                                />
+                                <template x-if="errors.materi_yang_dipelajari">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.materi_yang_dipelajari"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label for="surat_kunjungan" class="form-label"
+                                    ><span class="text-danger">*</span> Surat
+                                    Kunjungan</label
+                                >
+                                <input
+                                    type="file"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.surat_kunjungan}"
+                                    accept="application/pdf"
+                                    @change="form.surat_kunjungan = event.target.files[0]"
+                                />
+                                <template x-if="errors.surat_kunjungan">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.surat_kunjungan"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label
+                                    for="jabatan_penandatangan_surat"
+                                    class="form-label"
+                                    ><span class="text-danger">*</span> Jabatan
+                                    Penandatangan Surat Kunjungan</label
+                                >
+                                <input
+                                    type="text"
+                                    x-model="form.jabatan_penandatanganan_surat"
+                                    placeholder="Masukkan Jabatan Penandatangan Surat Kunjungan"
+                                    class="form-control"
+                                    :class="{'is-invalid': errors.jabatan_penandatanganan_surat}"
+                                />
+                                <template
+                                    x-if="errors.jabatan_penandatanganan_surat"
+                                >
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.jabatan_penandatanganan_surat"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tanggal_surat" class="form-label"
+                                    ><span class="text-danger">*</span> Tanggal
+                                    Surat</label
+                                >
+                                <input
+                                    type="date"
+                                    id="tanggal_surat"
+                                    class="form-control"
+                                    x-model="form.tanggal_surat"
+                                    :class="{'is-invalid': errors.tanggal_surat}"
+                                />
+                                <template x-if="errors.tanggal_surat">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.tanggal_surat"
+                                    ></div>
+                                </template>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nomor_surat" class="form-label"
+                                    ><span class="text-danger">*</span> Nomor
+                                    Surat</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nomor_surat"
+                                    x-model="form.nomor_surat"
+                                    :class="{'is-invalid': errors.nomor_surat}"
+                                    placeholder="Masukkan nomor surat pengajuan anda"
+                                />
+                                <template x-if="errors.nomor_surat">
+                                    <div
+                                        class="invalid-feedback"
+                                        x-text="errors.nomor_surat"
+                                    ></div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-3 mb-5">
+                        <template x-if="!isLoading">
+                            <button class="btn btn-lg btn-info" type="submit">
+                                Simpan Data
+                            </button>
+                        </template>
+                        <template x-if="isLoading">
+                            <button
+                                class="btn btn-lg btn-info"
+                                type="button"
+                                disabled=""
+                            >
+                                <span
+                                    class="spinner-border spinner-border-sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                ></span>
+                                Loading...
+                            </button>
+                        </template>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- Bootstrap core JS-->
+        <script src="../../../cdn.jsdelivr.net/npm/bootstrap%405.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../guest/js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="../../../cdn.startbootstrap.com/sb-forms-0.4.1.js"></script>
+
+        <script src="../../../npmcdn.com/flatpickr%404.6.13/dist/flatpickr.min.js"></script>
+        <script src="../../../npmcdn.com/flatpickr%404.6.13/dist/l10n/id.js"></script>
+        <script>
+            const myInput = document.querySelector(".periode");
+            console.log(myInput);
+            const fp = flatpickr(myInput, {
+                altInput: true,
+                altFormat: "d F Y",
+                dateFormat: "Y-m-d",
+                minDate: new Date().fp_incr(14),
+                mode: "range",
+                locale: "id",
+            }); // flatpickr
+        </script>
+        <script type="text/javascript">
+            var phpdebugbar = new PhpDebugBar.DebugBar();
+            phpdebugbar.addIndicator(
+                "php_version",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "code",
+                    tooltip: "PHP Version",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "messages",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "list-alt",
+                    title: "Messages",
+                    widget: new PhpDebugBar.Widgets.MessagesWidget(),
+                })
+            );
+            phpdebugbar.addIndicator(
+                "time",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "clock-o",
+                    tooltip: "Request Duration",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "timeline",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "tasks",
+                    title: "Timeline",
+                    widget: new PhpDebugBar.Widgets.TimelineWidget(),
+                })
+            );
+            phpdebugbar.addIndicator(
+                "memory",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "cogs",
+                    tooltip: "Memory Usage",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "exceptions",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "bug",
+                    title: "Exceptions",
+                    widget: new PhpDebugBar.Widgets.ExceptionsWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "views",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "leaf",
+                    title: "Views",
+                    widget: new PhpDebugBar.Widgets.TemplatesWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "route",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "share",
+                    title: "Route",
+                    widget: new PhpDebugBar.Widgets.HtmlVariableListWidget(),
+                })
+            );
+            phpdebugbar.addIndicator(
+                "currentroute",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "share",
+                    tooltip: "Route",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "queries",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "database",
+                    title: "Queries",
+                    widget: new PhpDebugBar.Widgets.SQLQueriesWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "models",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "cubes",
+                    title: "Models",
+                    widget: new PhpDebugBar.Widgets.HtmlVariableListWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "emails",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "inbox",
+                    title: "Mails",
+                    widget: new PhpDebugBar.Widgets.MailsWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "gate",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "list-alt",
+                    title: "Gate",
+                    widget: new PhpDebugBar.Widgets.MessagesWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "session",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "archive",
+                    title: "Session",
+                    widget: new PhpDebugBar.Widgets.VariableListWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "request",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "tags",
+                    title: "Request",
+                    widget: new PhpDebugBar.Widgets.HtmlVariableListWidget(),
+                })
+            );
+            phpdebugbar.setDataMap({
+                php_version: ["php.version"],
+                messages: ["messages.messages", []],
+                "messages:badge": ["messages.count", null],
+                time: ["time.duration_str", "0ms"],
+                timeline: ["time", {}],
+                memory: ["memory.peak_usage_str", "0B"],
+                exceptions: ["exceptions.exceptions", []],
+                "exceptions:badge": ["exceptions.count", null],
+                views: ["views", []],
+                "views:badge": ["views.nb_templates", 0],
+                route: ["route", {}],
+                currentroute: ["route.uri"],
+                queries: ["queries", []],
+                "queries:badge": ["queries.nb_statements", 0],
+                models: ["models.data", {}],
+                "models:badge": ["models.count", 0],
+                emails: ["symfonymailer_mails.mails", []],
+                "emails:badge": ["symfonymailer_mails.count", null],
+                gate: ["gate.messages", []],
+                "gate:badge": ["gate.count", null],
+                session: ["session", {}],
+                request: ["request", {}],
+            });
+            phpdebugbar.restoreState();
+            phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(
+                phpdebugbar,
+                undefined,
+                true
+            );
+            phpdebugbar.ajaxHandler.bindToFetch();
+            phpdebugbar.ajaxHandler.bindToXHR();
+            phpdebugbar.setOpenHandler(
+                new PhpDebugBar.OpenHandler({
+                    url: "http:\/\/118.97.163.52:8182\/magang\/_debugbar\/open",
+                })
+            );
+            phpdebugbar.addDataSet(
+                {
+                    __meta: {
+                        id: "X9659a31b8f8dc19b0a10917a7ccfca26",
+                        datetime: "2024-11-18 23:42:08",
+                        utime: 1731948128.86042,
+                        method: "GET",
+                        uri: "\/magang\/pengajuan\/pengajuan-kunjungan",
+                        ip: "182.1.5.142",
+                    },
+                    php: { version: "8.1.0", interface: "cgi-fcgi" },
+                    messages: { count: 0, messages: [] },
+                    time: {
+                        start: 1731948128.230291,
+                        end: 1731948128.860448,
+                        duration: 0.6301569938659668,
+                        duration_str: "630ms",
+                        measures: [
+                            {
+                                label: "Booting",
+                                start: 1731948128.230291,
+                                relative_start: 0,
+                                end: 1731948128.468172,
+                                relative_end: 1731948128.468172,
+                                duration: 0.23788118362426758,
+                                duration_str: "238ms",
+                                memory: 0,
+                                memory_str: "0B",
+                                params: [],
+                                collector: "time",
+                            },
+                            {
+                                label: "Application",
+                                start: 1731948128.468197,
+                                relative_start: 0.23790621757507324,
+                                end: 1731948128.860452,
+                                relative_end: 4.0531158447265625e-6,
+                                duration: 0.3922548294067383,
+                                duration_str: "392ms",
+                                memory: 0,
+                                memory_str: "0B",
+                                params: [],
+                                collector: "time",
+                            },
+                        ],
+                    },
+                    memory: { peak_usage: 23417480, peak_usage_str: "22MB" },
+                    exceptions: { count: 0, exceptions: [] },
+                    views: {
+                        nb_templates: 3,
+                        templates: [
+                            {
+                                name: "1x guest.pengajuan.show",
+                                param_count: null,
+                                params: [],
+                                start: 1731948128.835591,
+                                type: "blade",
+                                hash: "bladeC:\\xampp\\htdocs\\magang\\resources\\views\/guest\/pengajuan\/show.blade.phpguest.pengajuan.show",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fresources%2Fviews%2Fguest%2Fpengajuan%2Fshow.blade.php&line=1",
+                                    ajax: false,
+                                    filename: "show.blade.php",
+                                    line: "",
+                                },
+                                render_count: 1,
+                                name_original: "guest.pengajuan.show",
+                            },
+                            {
+                                name: "1x layout.landing-page-layout.main",
+                                param_count: null,
+                                params: [],
+                                start: 1731948128.841473,
+                                type: "blade",
+                                hash: "bladeC:\\xampp\\htdocs\\magang\\resources\\views\/layout\/landing-page-layout\/main.blade.phplayout.landing-page-layout.main",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fresources%2Fviews%2Flayout%2Flanding-page-layout%2Fmain.blade.php&line=1",
+                                    ajax: false,
+                                    filename: "main.blade.php",
+                                    line: "",
+                                },
+                                render_count: 1,
+                                name_original:
+                                    "layout.landing-page-layout.main",
+                            },
+                            {
+                                name: "1x layout.landing-page-layout.navbar",
+                                param_count: null,
+                                params: [],
+                                start: 1731948128.84216,
+                                type: "blade",
+                                hash: "bladeC:\\xampp\\htdocs\\magang\\resources\\views\/layout\/landing-page-layout\/navbar.blade.phplayout.landing-page-layout.navbar",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fresources%2Fviews%2Flayout%2Flanding-page-layout%2Fnavbar.blade.php&line=1",
+                                    ajax: false,
+                                    filename: "navbar.blade.php",
+                                    line: "",
+                                },
+                                render_count: 1,
+                                name_original:
+                                    "layout.landing-page-layout.navbar",
+                            },
+                        ],
+                    },
+                    route: {
+                        uri: "GET pengajuan\/{pengajuan}",
+                        middleware: "web, guest",
+                        as: "pengajuan.show",
+                        controller:
+                            "App\\Http\\Controllers\\PengajuanController@show",
+                        namespace: null,
+                        prefix: "",
+                        where: [],
+                        file: '<a href="phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=51" onclick="">app\/Http\/Controllers\/PengajuanController.php:51-69<\/a>',
+                    },
+                    queries: {
+                        nb_statements: 7,
+                        nb_failed_statements: 0,
+                        accumulated_duration: 0.24525999999999998,
+                        accumulated_duration_str: "245ms",
+                        memory_usage: 0,
+                        memory_usage_str: null,
+                        statements: [
+                            {
+                                sql: "Connection Established",
+                                type: "transaction",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 53,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 205,
+                                    },
+                                ],
+                                start: 1731948128.528433,
+                                duration: 0,
+                                duration_str: "",
+                                memory: 0,
+                                memory_str: null,
+                                filename: "PengajuanController.php:53",
+                                source: "app\/Http\/Controllers\/PengajuanController.php:53",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=53",
+                                    ajax: false,
+                                    filename: "PengajuanController.php",
+                                    line: "53",
+                                },
+                                connection: "magang",
+                                start_percent: 0,
+                                width_percent: 0,
+                            },
+                            {
+                                sql: "select distinct `nama_lembaga_pendidikan` from `pengajuan` where `nama_lembaga_pendidikan` is not null",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 53,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 205,
+                                    },
+                                ],
+                                start: 1731948128.539376,
+                                duration: 0.18707,
+                                duration_str: "187ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename: "PengajuanController.php:53",
+                                source: "app\/Http\/Controllers\/PengajuanController.php:53",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=53",
+                                    ajax: false,
+                                    filename: "PengajuanController.php",
+                                    line: "53",
+                                },
+                                connection: "magang",
+                                start_percent: 0,
+                                width_percent: 76.274,
+                            },
+                            {
+                                sql: "select distinct `fakultas` from `pengajuan` where `fakultas` is not null",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 205,
+                                    },
+                                ],
+                                start: 1731948128.73738,
+                                duration: 0.00215,
+                                duration_str: "2.15ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename: "PengajuanController.php:54",
+                                source: "app\/Http\/Controllers\/PengajuanController.php:54",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=54",
+                                    ajax: false,
+                                    filename: "PengajuanController.php",
+                                    line: "54",
+                                },
+                                connection: "magang",
+                                start_percent: 76.274,
+                                width_percent: 0.877,
+                            },
+                            {
+                                sql: "select distinct `jurusan` from `pengajuan` where `jurusan` is not null",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 55,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 205,
+                                    },
+                                ],
+                                start: 1731948128.743357,
+                                duration: 0.00232,
+                                duration_str: "2.32ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename: "PengajuanController.php:55",
+                                source: "app\/Http\/Controllers\/PengajuanController.php:55",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FHttp%2FControllers%2FPengajuanController.php&line=55",
+                                    ajax: false,
+                                    filename: "PengajuanController.php",
+                                    line: "55",
+                                },
+                                connection: "magang",
+                                start_percent: 77.151,
+                                width_percent: 0.946,
+                            },
+                            {
+                                sql: "select * from `jenis_pengajuan` where `slug` = 'pengajuan-kunjungan' limit 1",
+                                type: "query",
+                                params: [],
+                                bindings: ["pengajuan-kunjungan"],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "app\/Repositories\/JenisPengajuan\/JenisPengajuanRepositoryImplement.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Repositories\\JenisPengajuan\\JenisPengajuanRepositoryImplement.php",
+                                        line: 56,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 56,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 20,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 21,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                ],
+                                start: 1731948128.7490358,
+                                duration: 0.02289,
+                                duration_str: "22.89ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename:
+                                    "JenisPengajuanRepositoryImplement.php:56",
+                                source: "app\/Repositories\/JenisPengajuan\/JenisPengajuanRepositoryImplement.php:56",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FJenisPengajuan%2FJenisPengajuanRepositoryImplement.php&line=56",
+                                    ajax: false,
+                                    filename:
+                                        "JenisPengajuanRepositoryImplement.php",
+                                    line: "56",
+                                },
+                                connection: "magang",
+                                start_percent: 78.097,
+                                width_percent: 9.333,
+                            },
+                            {
+                                sql: "select * from `personnel_area`",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Repositories\\PersonnelArea\\PersonnelAreaRepositoryImplement.php",
+                                        line: 32,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 58,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                ],
+                                start: 1731948128.778023,
+                                duration: 0.01124,
+                                duration_str: "11.24ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename:
+                                    "PersonnelAreaRepositoryImplement.php:32",
+                                source: "app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php:32",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FPersonnelArea%2FPersonnelAreaRepositoryImplement.php&line=32",
+                                    ajax: false,
+                                    filename:
+                                        "PersonnelAreaRepositoryImplement.php",
+                                    line: "32",
+                                },
+                                connection: "magang",
+                                start_percent: 87.43,
+                                width_percent: 4.583,
+                            },
+                            {
+                                sql: "select * from `sub_area` where `sub_area`.`kode_area` in ('EH1A', 'EK1A', 'EP1A')",
+                                type: "query",
+                                params: [],
+                                bindings: ["EH1A", "EK1A", "EP1A"],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 20,
+                                        namespace: null,
+                                        name: "app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Repositories\\PersonnelArea\\PersonnelAreaRepositoryImplement.php",
+                                        line: 32,
+                                    },
+                                    {
+                                        index: 21,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 58,
+                                    },
+                                    {
+                                        index: 22,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 23,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 24,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                ],
+                                start: 1731948128.796737,
+                                duration: 0.01126,
+                                duration_str: "11.26ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename:
+                                    "PersonnelAreaRepositoryImplement.php:32",
+                                source: "app\/Repositories\/PersonnelArea\/PersonnelAreaRepositoryImplement.php:32",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FPersonnelArea%2FPersonnelAreaRepositoryImplement.php&line=32",
+                                    ajax: false,
+                                    filename:
+                                        "PersonnelAreaRepositoryImplement.php",
+                                    line: "32",
+                                },
+                                connection: "magang",
+                                start_percent: 92.013,
+                                width_percent: 4.591,
+                            },
+                            {
+                                sql: "select * from `jenjang_pendidikan` where `is_aktif` = 1",
+                                type: "query",
+                                params: [],
+                                bindings: ["1"],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "app\/Repositories\/JenjangPendidikan\/JenjangPendidikanRepositoryImplement.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Repositories\\JenjangPendidikan\\JenjangPendidikanRepositoryImplement.php",
+                                        line: 32,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "app\/Http\/Controllers\/PengajuanController.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\app\\Http\\Controllers\\PengajuanController.php",
+                                        line: 59,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                                        line: 43,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        file: "C:\\xampp\\htdocs\\magang\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                                        line: 260,
+                                    },
+                                ],
+                                start: 1731948128.8114738,
+                                duration: 0.00833,
+                                duration_str: "8.33ms",
+                                memory: 0,
+                                memory_str: null,
+                                filename:
+                                    "JenjangPendidikanRepositoryImplement.php:32",
+                                source: "app\/Repositories\/JenjangPendidikan\/JenjangPendidikanRepositoryImplement.php:32",
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FRepositories%2FJenjangPendidikan%2FJenjangPendidikanRepositoryImplement.php&line=32",
+                                    ajax: false,
+                                    filename:
+                                        "JenjangPendidikanRepositoryImplement.php",
+                                    line: "32",
+                                },
+                                connection: "magang",
+                                start_percent: 96.604,
+                                width_percent: 3.396,
+                            },
+                        ],
+                    },
+                    models: {
+                        data: {
+                            "App\\Models\\Pengajuan": {
+                                value: 312,
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FPengajuan.php&line=1",
+                                    ajax: false,
+                                    filename: "Pengajuan.php",
+                                    line: "",
+                                },
+                            },
+                            "App\\Models\\SubArea": {
+                                value: 50,
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FSubArea.php&line=1",
+                                    ajax: false,
+                                    filename: "SubArea.php",
+                                    line: "",
+                                },
+                            },
+                            "App\\Models\\PersonnelArea": {
+                                value: 3,
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FPersonnelArea.php&line=1",
+                                    ajax: false,
+                                    filename: "PersonnelArea.php",
+                                    line: "",
+                                },
+                            },
+                            "App\\Models\\JenjangPendidikan": {
+                                value: 2,
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FJenjangPendidikan.php&line=1",
+                                    ajax: false,
+                                    filename: "JenjangPendidikan.php",
+                                    line: "",
+                                },
+                            },
+                            "App\\Models\\JenisPengajuan": {
+                                value: 1,
+                                xdebug_link: {
+                                    url: "phpstorm:\/\/open?file=C%3A%2Fxampp%2Fhtdocs%2Fmagang%2Fapp%2FModels%2FJenisPengajuan.php&line=1",
+                                    ajax: false,
+                                    filename: "JenisPengajuan.php",
+                                    line: "",
+                                },
+                            },
+                        },
+                        count: 368,
+                        is_counter: true,
+                    },
+                    symfonymailer_mails: { count: 0, mails: [] },
+                    gate: { count: 0, messages: [] },
+                    session: {
+                        _token: "RI1Vxnc9VmDcOyBuaPLO7fb9OxkBmrGyPK9K63Gb",
+                        _previous:
+                            'array:1 [\n  "url" => "http:\/\/118.97.163.52:8182\/magang\/pengajuan\/pengajuan-kunjungan"\n]',
+                        _flash: 'array:2 [\n  "old" => []\n  "new" => []\n]',
+                        PHPDEBUGBAR_STACK_DATA: "[]",
+                    },
+                    request: {
+                        path_info: "\/pengajuan\/pengajuan-kunjungan",
+                        status_code:
+                            '<pre class=sf-dump id=sf-dump-935643118 data-indent-pad="  "><span class=sf-dump-num>200<\/span>\n<\/pre><script>Sfdump("sf-dump-935643118", {"maxDepth":0})<\/script>\n',
+                        status_text: "OK",
+                        format: "html",
+                        content_type: "text\/html; charset=UTF-8",
+                        request_query:
+                            '<pre class=sf-dump id=sf-dump-753353559 data-indent-pad="  ">[]\n<\/pre><script>Sfdump("sf-dump-753353559", {"maxDepth":0})<\/script>\n',
+                        request_request:
+                            '<pre class=sf-dump id=sf-dump-246020820 data-indent-pad="  ">[]\n<\/pre><script>Sfdump("sf-dump-246020820", {"maxDepth":0})<\/script>\n',
+                        request_headers:
+                            '<pre class=sf-dump id=sf-dump-117468117 data-indent-pad="  "><span class=sf-dump-note>array:6<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>connection<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="10 characters">keep-alive<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>host<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="18 characters">118.97.163.52:8182<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>user-agent<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="50 characters">Mozilla\/4.5 (compatible; HTTrack 3.0x; Windows 98)<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>accept<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="98 characters">text\/html,image\/png,image\/jpeg,image\/pjpeg,image\/x-xbitmap,image\/svg+xml,image\/gif;q=0.9,*\/*;q=0.1<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>accept-language<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="5 characters">en, *<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>accept-encoding<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="20 characters">gzip, identity;q=0.9<\/span>"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-117468117", {"maxDepth":0})<\/script>\n',
+                        request_cookies:
+                            '<pre class=sf-dump id=sf-dump-1236333466 data-indent-pad="  ">[]\n<\/pre><script>Sfdump("sf-dump-1236333466", {"maxDepth":0})<\/script>\n',
+                        response_headers:
+                            '<pre class=sf-dump id=sf-dump-301030421 data-indent-pad="  "><span class=sf-dump-note>array:5<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>content-type<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="24 characters">text\/html; charset=UTF-8<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>cache-control<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="17 characters">no-cache, private<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>date<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="29 characters">Mon, 18 Nov 2024 16:42:08 GMT<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>set-cookie<\/span>" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="428 characters">XSRF-TOKEN=eyJpdiI6Ijd6OEJGNXhodXpOSFNNeHJ2aDI4SWc9PSIsInZhbHVlIjoiNDJmS0d0eUZFaDhwb2Z4R2FULzVRK1d4WmtxYm5CcldaZGpTSWJ5QmFDOGNtZEExU3hhNXh1MEdiaGJhTjBqakZYemtNYUJJTUM2YzlLeUNzNHJoVEpzZndKNklmZWc3Z2pEcVlIY2doSVoycUcxZVZHVC85eitGbVZIT21iTUciLCJtYWMiOiI2NmE2NWMyM2E4MTk5NDQ0YjdmYzBiZDIzOTkxMDU4ZjBmNDJlMDI0OTc0YzJkZTM4NmRlZjFkNDhhZGFjYjY3IiwidGFnIjoiIn0%3D; expires=Mon, 18 Nov 2024 18:42:08 GMT; Max-Age=7200; path=\/; samesite=lax<\/span>"\n    <span class=sf-dump-index>1<\/span> => "<span class=sf-dump-str title="443 characters">laravel_session=eyJpdiI6Im5GMVN4VkJTWC9jdFRKTEVQcFVGYUE9PSIsInZhbHVlIjoiYXYvZHJiVnRwWVJlRFFPMENldkFZTU1mcUg4QzJkREl5VyttckFkSWN4MkEraFV0Vmpqci9xa3duRFduZDJ3ZXI4RkgxeS9KRTRTWTB4SHN6OXF6MFc3V0JBMFN2ai9Fcm5sRVhVQjJnaWVLUHBHdFBFOFprbks3VFRXeHB4VkwiLCJtYWMiOiJkOGFkNzRjMmY5ZGY0NWZkNTJhZTI0MDk0YmI5NDM1Mzg2MWIyNjc4MzkxNzA5ZDUxYjdmNTc2YTJlMTRmZTJmIiwidGFnIjoiIn0%3D; expires=Mon, 18 Nov 2024 18:42:08 GMT; Max-Age=7200; path=\/; httponly; samesite=lax<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>Set-Cookie<\/span>" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="400 characters">XSRF-TOKEN=eyJpdiI6Ijd6OEJGNXhodXpOSFNNeHJ2aDI4SWc9PSIsInZhbHVlIjoiNDJmS0d0eUZFaDhwb2Z4R2FULzVRK1d4WmtxYm5CcldaZGpTSWJ5QmFDOGNtZEExU3hhNXh1MEdiaGJhTjBqakZYemtNYUJJTUM2YzlLeUNzNHJoVEpzZndKNklmZWc3Z2pEcVlIY2doSVoycUcxZVZHVC85eitGbVZIT21iTUciLCJtYWMiOiI2NmE2NWMyM2E4MTk5NDQ0YjdmYzBiZDIzOTkxMDU4ZjBmNDJlMDI0OTc0YzJkZTM4NmRlZjFkNDhhZGFjYjY3IiwidGFnIjoiIn0%3D; expires=Mon, 18-Nov-2024 18:42:08 GMT; path=\/<\/span>"\n    <span class=sf-dump-index>1<\/span> => "<span class=sf-dump-str title="415 characters">laravel_session=eyJpdiI6Im5GMVN4VkJTWC9jdFRKTEVQcFVGYUE9PSIsInZhbHVlIjoiYXYvZHJiVnRwWVJlRFFPMENldkFZTU1mcUg4QzJkREl5VyttckFkSWN4MkEraFV0Vmpqci9xa3duRFduZDJ3ZXI4RkgxeS9KRTRTWTB4SHN6OXF6MFc3V0JBMFN2ai9Fcm5sRVhVQjJnaWVLUHBHdFBFOFprbks3VFRXeHB4VkwiLCJtYWMiOiJkOGFkNzRjMmY5ZGY0NWZkNTJhZTI0MDk0YmI5NDM1Mzg2MWIyNjc4MzkxNzA5ZDUxYjdmNTc2YTJlMTRmZTJmIiwidGFnIjoiIn0%3D; expires=Mon, 18-Nov-2024 18:42:08 GMT; path=\/; httponly<\/span>"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-301030421", {"maxDepth":0})<\/script>\n',
+                        session_attributes:
+                            '<pre class=sf-dump id=sf-dump-1602341443 data-indent-pad="  "><span class=sf-dump-note>array:4<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>_token<\/span>" => "<span class=sf-dump-str title="40 characters">RI1Vxnc9VmDcOyBuaPLO7fb9OxkBmrGyPK9K63Gb<\/span>"\n  "<span class=sf-dump-key>_previous<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    "<span class=sf-dump-key>url<\/span>" => "<span class=sf-dump-str title="62 characters">http:\/\/118.97.163.52:8182\/magang\/pengajuan\/pengajuan-kunjungan<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>_flash<\/span>" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    "<span class=sf-dump-key>old<\/span>" => []\n    "<span class=sf-dump-key>new<\/span>" => []\n  <\/samp>]\n  "<span class=sf-dump-key>PHPDEBUGBAR_STACK_DATA<\/span>" => []\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-1602341443", {"maxDepth":0})<\/script>\n',
+                    },
+                },
+                "X9659a31b8f8dc19b0a10917a7ccfca26"
+            );
+        </script>
+    </body>
+</html>
